@@ -1,0 +1,253 @@
+import { Metadata } from 'next'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { CTASection } from '@/components/sections/cta-section'
+import { Award, GraduationCap, Briefcase, Heart, Target, BookOpen } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'About Dr. Soutrik Mukherjee | Orthopedic Surgeon in Kolkata',
+  description: 'Learn about Dr. Soutrik Mukherjee, a leading Orthopedic, Joint Replacement & Spine Surgeon in Kolkata with extensive experience in musculoskeletal care.',
+}
+
+const qualifications = [
+  'MBBS - Medical College, Kolkata',
+  'MS (Orthopaedics) - IPGMER, Kolkata',
+  'DNB (Orthopaedics) - National Board of Examinations',
+  'Fellowship in Joint Replacement Surgery',
+  'Advanced Training in Spine Surgery',
+  'International Fellowship in Sports Medicine',
+]
+
+const memberships = [
+  'Indian Orthopaedic Association (IOA)',
+  'Indian Arthroscopy Society of India (ASI)',
+  'Bengal Orthopaedic Association',
+  'AO Trauma India',
+  'International Society of Orthopaedic Surgery and Traumatology (SICOT)',
+]
+
+const awards = [
+  { year: 'XXXX', title: 'Excellence in Orthopedic Surgery Award' },
+  { year: 'XXXX', title: 'Best Paper Presentation - National Conference' },
+  { year: 'XXXX', title: 'Young Achiever Award - Bengal Orthopaedic Association' },
+  { year: 'XXXX', title: 'Clinical Excellence Recognition' },
+]
+
+const specialInterests = [
+  'Primary & Revision Joint Replacement',
+  'Minimally Invasive Spine Surgery',
+  'Sports Injury Management',
+  'Complex Trauma Reconstruction',
+  'Arthroscopic Surgery',
+  'Pediatric Orthopedics',
+]
+
+export default function AboutPage() {
+  return (
+    <main>
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-muted via-background to-muted">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-wider text-secondary mb-3">
+                About the Doctor
+              </p>
+              <h1 className="font-serif text-4xl sm:text-5xl font-bold text-foreground mb-6">
+                Dr. Soutrik Mukherjee
+              </h1>
+              <p className="text-xl text-primary font-medium mb-6">
+                MS (Ortho), DNB (Ortho), Fellowship in Joint Replacement
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Dr. Soutrik Mukherjee is a distinguished orthopedic surgeon specializing in 
+                joint replacement, spine surgery, and sports medicine. With a patient-centric 
+                approach and commitment to clinical excellence, he has helped thousands of 
+                patients regain mobility and return to pain-free living.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                His practice philosophy centers on evidence-based medicine, minimally invasive 
+                techniques, and comprehensive patient education. Dr. Mukherjee believes that 
+                informed patients achieve better outcomes, and he takes time to explain every 
+                aspect of the treatment journey.
+              </p>
+            </div>
+            
+            <div className="relative">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4">
+                      <svg className="w-20 h-20 text-primary/40" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                      </svg>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Professional Portrait</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Journey Section */}
+      <section className="py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <Briefcase className="h-6 w-6 text-primary" />
+              </div>
+              <h2 className="font-serif text-3xl font-bold text-foreground">
+                Professional Journey
+              </h2>
+            </div>
+            <div className="prose prose-lg max-w-none text-muted-foreground">
+              <p>
+                Dr. Mukherjee&apos;s journey in orthopedic surgery began with a passion for helping 
+                patients overcome musculoskeletal challenges. After completing his medical education 
+                with distinction, he pursued specialized training in orthopedics at some of India&apos;s 
+                premier institutions.
+              </p>
+              <p>
+                His fellowship training in joint replacement surgery provided him with advanced 
+                skills in both primary and revision procedures. Additionally, his specialized 
+                training in spine surgery has equipped him to handle complex spinal conditions 
+                using the latest minimally invasive techniques.
+              </p>
+              <p>
+                Over the years, Dr. Mukherjee has performed hundreds of successful joint replacement 
+                and spine surgeries, earning recognition from peers and patients alike. His commitment 
+                to continuous learning ensures that his patients benefit from the latest advances 
+                in orthopedic care.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Qualifications & Memberships */}
+      <section className="py-20 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <GraduationCap className="h-6 w-6 text-primary" />
+                </div>
+                <h2 className="font-serif text-2xl font-bold text-foreground">
+                  Qualifications
+                </h2>
+              </div>
+              <ul className="space-y-3">
+                {qualifications.map((qual, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">{qual}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <BookOpen className="h-6 w-6 text-primary" />
+                </div>
+                <h2 className="font-serif text-2xl font-bold text-foreground">
+                  Professional Memberships
+                </h2>
+              </div>
+              <ul className="space-y-3">
+                {memberships.map((membership, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-secondary mt-2 flex-shrink-0" />
+                    <span className="text-muted-foreground">{membership}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Awards Section */}
+      <section className="py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Award className="h-6 w-6 text-primary" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-foreground">
+              Awards & Recognitions
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {awards.map((award, index) => (
+              <div 
+                key={index}
+                className="p-6 rounded-xl border border-border bg-background hover:border-primary/30 hover:shadow-md transition-all"
+              >
+                <p className="text-sm text-secondary font-medium mb-2">{award.year}</p>
+                <p className="font-medium text-foreground">{award.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Special Interests */}
+      <section className="py-20 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Target className="h-6 w-6 text-primary" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-foreground">
+              Areas of Special Interest
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {specialInterests.map((interest, index) => (
+              <div 
+                key={index}
+                className="p-4 rounded-lg bg-background border border-border flex items-center gap-3"
+              >
+                <div className="w-2 h-2 rounded-full bg-secondary" />
+                <span className="text-foreground">{interest}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+              <Heart className="h-8 w-8 text-primary" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-foreground mb-6">
+              Surgical Philosophy
+            </h2>
+            <blockquote className="text-xl text-muted-foreground leading-relaxed italic">
+              &quot;Every patient deserves to understand their condition and be an active participant 
+              in their treatment decisions. My role is not just to operate, but to guide patients 
+              through their entire journey—from diagnosis to full recovery. I believe in treating 
+              patients the way I would want my own family to be treated: with expertise, compassion, 
+              and transparency.&quot;
+            </blockquote>
+            <p className="mt-6 text-primary font-semibold">— Dr. Soutrik Mukherjee</p>
+          </div>
+        </div>
+      </section>
+
+      <CTASection />
+      <Footer />
+    </main>
+  )
+}
