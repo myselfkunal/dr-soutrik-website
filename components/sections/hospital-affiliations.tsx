@@ -1,10 +1,10 @@
 const hospitals = [
-  { name: 'Apollo Hospitals', location: 'Kolkata' },
-  { name: 'Fortis Hospital', location: 'Kolkata' },
-  { name: 'AMRI Hospitals', location: 'Salt Lake' },
-  { name: 'Medica Superspecialty', location: 'Kolkata' },
-  { name: 'Belle Vue Clinic', location: 'Kolkata' },
-  { name: 'Peerless Hospital', location: 'Kolkata' },
+  { name: 'Spandan Hospital', location: 'Kolkata' },
+  { name: 'JBCH', location: 'Salt Lake' },
+  { name: 'Eksag Sanjeevani', location: 'Baghbazar' },
+  { name: 'Lake Land Hospital', location: 'Kolkata' },
+  { name: 'Health Pillar Hospital', location: 'Kolkata' },
+  { name: 'Desun Hospital', location: 'Kolkata' },
 ]
 
 export function HospitalAffiliations() {
@@ -19,24 +19,26 @@ export function HospitalAffiliations() {
             Operating at Leading Hospitals
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Dr. Mukherjee operates at some of Kolkata&apos;s most prestigious healthcare facilities, 
-            ensuring access to world-class infrastructure and support.
+            Dr. Mukherjee operates at multiple hospitals across Kolkata, bringing advanced 
+            orthopedic care to patients wherever they are most comfortable.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {hospitals.map((hospital, index) => (
             <div 
               key={index}
-              className="p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all text-center"
+              className="p-6 rounded-xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all flex items-center gap-4"
             >
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-muted flex items-center justify-center">
-                <span className="text-2xl font-serif font-bold text-primary/60">
+              <div className="w-12 h-12 flex-shrink-0 rounded-full bg-primary/10 flex items-center justify-center">
+                <span className="text-lg font-bold text-primary">
                   {hospital.name.charAt(0)}
                 </span>
               </div>
-              <h3 className="font-medium text-foreground text-sm">{hospital.name}</h3>
-              <p className="text-xs text-muted-foreground mt-1">{hospital.location}</p>
+              <div>
+                <h3 className="font-semibold text-foreground text-sm">{hospital.name}</h3>
+                <p className="text-xs text-muted-foreground mt-0.5">{hospital.location}</p>
+              </div>
             </div>
           ))}
         </div>

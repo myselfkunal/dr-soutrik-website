@@ -85,7 +85,7 @@ const faqs = [
   {
     category: 'general',
     question: 'Does Dr. Mukherjee accept insurance?',
-    answer: 'Yes, we work with most major insurance providers and offer cashless hospitalization facilities at our affiliated hospitals. Our team assists with insurance paperwork and pre-authorization. Please contact our office with your insurance details, and we can verify coverage and explain any out-of-pocket costs before your visit.',
+    answer: 'Please contact the clinic directly to discuss payment modes and insurance coverage. You can call +91 98747 31994 or email drsoutrikmukherjee@gmail.com. Our team will guide you on what is applicable for your specific procedure and insurance plan.',
   },
   {
     category: 'general',

@@ -58,9 +58,9 @@ export function Header() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <a href="tel:+919999999999" className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors">
+          <a href="tel:+919874731994" className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors">
             <Phone className="h-4 w-4" />
-            <span className="hidden xl:inline">Call Now</span>
+            <span className="hidden xl:inline">+91 98747 31994</span>
           </a>
           <Button asChild>
             <Link href="/appointment">Book Appointment</Link>
@@ -102,9 +102,9 @@ export function Header() {
                 ))}
               </div>
               <div className="py-6 space-y-4">
-                <a href="tel:+919999999999" className="flex items-center gap-2 text-foreground">
+                <a href="tel:+919874731994" className="flex items-center gap-2 text-foreground">
                   <Phone className="h-5 w-5" />
-                  <span>Call Now</span>
+                  <span>+91 98747 31994</span>
                 </a>
                 <Button asChild className="w-full">
                   <Link href="/appointment">Book Appointment</Link>

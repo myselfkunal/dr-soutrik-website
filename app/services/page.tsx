@@ -7,180 +7,142 @@ import { ArrowRight, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
-  title: 'Orthopedic Services | Dr. Soutrik Mukherjee - Kolkata',
-  description: 'Comprehensive orthopedic services including Knee Replacement, Hip Replacement, Spine Surgery, Sports Injury Care, and Arthritis Treatment in Kolkata.',
+  title: 'Orthopedic Services | Dr. Soutrik Mukherjee – Lake Town, Kolkata',
+  description: 'Comprehensive orthopedic services by Dr. Soutrik Mukherjee including Joint Replacement, Spine Surgery, Complex Trauma, Arthroscopy, and Sports Medicine in Kolkata.',
 }
 
 const services = [
   {
-    id: 'knee-replacement',
-    title: 'Total Knee Replacement',
-    subtitle: 'Restore Mobility, Eliminate Pain',
-    description: 'Total knee replacement (TKR) is a surgical procedure to replace the damaged surfaces of the knee joint with artificial implants. It is highly effective for patients with severe arthritis or knee damage.',
+    id: 'trauma',
+    title: 'Complex Trauma Surgery',
+    subtitle: 'Expert Care for Fractures & Injuries',
+    description: 'Dr. Mukherjee has extensive training in managing complex fractures and polytrauma cases. Whether it is a road traffic accident, a fall, or a high-energy injury, his team provides rapid, expert surgical care to stabilise fractures, restore function, and minimise long-term complications. He uses modern internal fixation techniques — plates, nails, screws — and advocates for early mobilisation to speed up recovery.',
     conditions: [
-      'Osteoarthritis of the knee',
-      'Rheumatoid arthritis',
-      'Post-traumatic arthritis',
-      'Severe knee deformity',
-      'Failed conservative treatment',
+      'Complex long bone fractures (femur, tibia, humerus)',
+      'Pelvic and acetabular fractures',
+      'Periarticular fractures around knee, hip & shoulder',
+      'Open and compound fractures',
+      'Polytrauma and multi-system injuries',
+      'Non-union and malunion (failed fracture healing)',
     ],
     benefits: [
-      'Significant pain relief',
-      'Improved mobility and function',
-      'Better quality of life',
-      'Long-lasting results (15-20+ years)',
-      'Return to daily activities',
+      'Subspeciality fellowship training in pelvi-acetabular surgery',
+      'Modern fixation with early weight-bearing protocols',
+      'Minimally invasive fixation wherever appropriate',
+      'Comprehensive post-operative rehabilitation support',
+      'Guidance available for emergency cases',
     ],
-    recovery: 'Most patients can walk with support within 24-48 hours. Full recovery typically takes 3-6 months with proper physiotherapy.',
+    recovery: 'Recovery depends on fracture location and severity. Simple fractures heal in 6–10 weeks. Complex pelvic or periarticular fractures may require 3–6 months of supervised rehabilitation.',
   },
   {
-    id: 'hip-replacement',
-    title: 'Total Hip Replacement',
-    subtitle: 'Advanced Hip Care Solutions',
-    description: 'Hip replacement surgery involves removing damaged parts of the hip joint and replacing them with prosthetic components. Modern techniques allow for faster recovery and excellent outcomes.',
+    id: 'joint-replacement',
+    title: 'Primary & Revision Joint Replacement',
+    subtitle: 'Hip, Knee, Shoulder & Elbow',
+    description: 'Dr. Mukherjee performs primary and revision replacement surgeries across all major joints — hip, knee, shoulder, and elbow. With a Fellowship in Adult Joint Reconstruction and Sports Medicine (WBOA) and exposure to thousands of cases, he uses internationally validated implants and technique-driven approaches to deliver consistent, long-lasting outcomes. For patients with failed prior replacements, his revision expertise is particularly sought after.',
     conditions: [
-      'Hip osteoarthritis',
-      'Avascular necrosis',
-      'Hip fractures in elderly',
-      'Rheumatoid arthritis',
-      'Hip dysplasia',
+      'Severe osteoarthritis of hip, knee, shoulder or elbow',
+      'Avascular necrosis (bone death due to poor blood supply)',
+      'Rheumatoid and inflammatory arthritis',
+      'Post-traumatic arthritis following old fractures',
+      'Failed or worn-out prior joint replacements (revision)',
+      'Hip dysplasia and developmental deformities',
     ],
     benefits: [
-      'Complete pain relief',
-      'Restored hip function',
-      'Improved walking ability',
-      'Enhanced range of motion',
-      'Quick return to activities',
+      'Fellowship-trained in adult joint reconstruction',
+      'Both primary and complex revision procedures',
+      'Modern implants with 15–20+ year lifespan',
+      'Rapid rehabilitation — walking within 24–48 hours post knee/hip replacement',
+      'Structured physiotherapy protocol included',
     ],
-    recovery: 'Patients typically begin walking the day after surgery. Most resume normal activities within 6-8 weeks.',
+    recovery: 'Most patients walk with support within 1–2 days after knee or hip replacement. Return to independent walking in 4–6 weeks. Full functional recovery takes 3–6 months with physiotherapy.',
   },
   {
-    id: 'spine-surgery',
-    title: 'Spine Surgery',
-    subtitle: 'Minimally Invasive Spine Care',
-    description: 'Dr. Mukherjee offers comprehensive spine surgery services using minimally invasive techniques whenever possible, resulting in less pain, smaller incisions, and faster recovery.',
+    id: 'arthroscopy',
+    title: 'Arthroscopic Knee & Shoulder Surgery',
+    subtitle: 'Minimally Invasive Joint Surgery',
+    description: 'Arthroscopy is a keyhole surgical technique that allows Dr. Mukherjee to diagnose and treat joint problems through tiny incisions using a camera and specialised instruments. This means significantly less pain, minimal scarring, and faster recovery compared to open surgery. Dr. Mukherjee performs arthroscopic procedures on both the knee and shoulder — from meniscus repairs and ACL reconstructions to rotator cuff repairs and shoulder stabilisations.',
     conditions: [
-      'Herniated disc',
-      'Spinal stenosis',
-      'Degenerative disc disease',
-      'Spondylolisthesis',
-      'Spinal deformities',
-      'Spinal tumors',
+      'Meniscus tears (medial and lateral)',
+      'ACL and PCL ligament injuries',
+      'Knee cartilage damage and chondral lesions',
+      'Rotator cuff tears (partial and complete)',
+      'Shoulder impingement and bursitis',
+      'Shoulder instability and recurrent dislocations',
     ],
     benefits: [
-      'Minimally invasive options',
-      'Faster recovery times',
-      'Reduced post-operative pain',
-      'Smaller incisions',
-      'Shorter hospital stay',
+      'Keyhole surgery — 2–3 tiny incisions only',
+      'Significantly less post-operative pain',
+      'Day procedure or 1-night stay in most cases',
+      'Faster return to work and daily activities',
+      'Sports-specific rehabilitation protocols for athletes',
     ],
-    recovery: 'Recovery varies by procedure. Minimally invasive procedures often allow return to activities within 2-4 weeks.',
+    recovery: 'Meniscus repair: 4–6 weeks to return to light activity. ACL reconstruction: 6–9 months before full sport return. Rotator cuff: 4–6 months depending on tear size.',
+  },
+  {
+    id: 'sports',
+    title: 'Ligament Injuries & Sports Medicine',
+    subtitle: 'Get Back to the Sport You Love',
+    description: 'Dr. Mukherjee holds a Fellowship in Adult Joint Reconstruction and Sports Medicine (WBOA) and understands what it means for an active person — whether a professional athlete or a weekend runner — to be sidelined by an injury. His sports medicine practice covers the full spectrum from acute ligament injuries to chronic overuse conditions, with a focus on getting patients back to activity as safely and quickly as possible.',
+    conditions: [
+      'ACL, PCL, MCL and LCL tears',
+      'Meniscal injuries in athletes',
+      'Ankle ligament sprains and chronic instability',
+      'Tennis elbow and golfer\'s elbow (tendinopathy)',
+      'Patellofemoral pain syndrome',
+      'Muscle and tendon injuries',
+    ],
+    benefits: [
+      'Fellowship-trained sports medicine expertise',
+      'Conservative and surgical options discussed openly',
+      'Criteria-based return-to-sport clearance',
+      'Sports-specific rehabilitation plans',
+      'Injury prevention advice and load management',
+    ],
+    recovery: 'Ankle sprains: 4–8 weeks. Meniscal repairs: 4–6 weeks. ACL reconstruction: 6–9 months. Tendinopathy: 8–12 weeks with structured rehab.',
+  },
+  {
+    id: 'spine',
+    title: 'Degenerative & Traumatic Spine Surgery',
+    subtitle: 'Precise Spine Care for Lasting Relief',
+    description: 'Dr. Mukherjee completed his Fellowship in Spine Surgeries (SSWB) and manages a wide range of degenerative and trauma-related spinal conditions. His approach is always conservative-first — surgery is recommended only when non-surgical treatments have failed or when there is a neurological emergency. When surgery is indicated, he uses minimally invasive techniques wherever possible to reduce muscle damage and speed recovery.',
+    conditions: [
+      'Lumbar disc herniation with sciatica',
+      'Degenerative disc disease and spondylosis',
+      'Spinal stenosis (narrowing of the spinal canal)',
+      'Spondylolisthesis (vertebral slippage)',
+      'Traumatic spine fractures',
+      'Ankylosing spondylitis and inflammatory spinal conditions',
+    ],
+    benefits: [
+      'Fellowship training in spine surgery (SSWB)',
+      'Conservative treatment prioritised wherever possible',
+      'Minimally invasive surgical options',
+      'Shorter hospital stays and faster recovery',
+      'Comprehensive post-op physiotherapy guidance',
+    ],
+    recovery: 'Microdiscectomy: return to light activity in 2–4 weeks. Spinal fusion: 3–6 months for full recovery. All patients receive a structured physiotherapy programme.',
   },
   {
     id: 'arthritis',
-    title: 'Arthritis Treatment',
-    subtitle: 'Comprehensive Arthritis Management',
-    description: 'A personalized approach to managing all forms of arthritis, from conservative treatments like medication and physical therapy to surgical interventions when necessary.',
+    title: 'Osteoarthritis, Osteoporosis & Rheumatoid Arthritis',
+    subtitle: 'Long-Term Management of Bone & Joint Conditions',
+    description: 'Arthritis and metabolic bone diseases like osteoporosis affect millions of Indians, particularly women over 50. Dr. Mukherjee offers a comprehensive, staged management approach — starting with lifestyle advice, physiotherapy, and medications, progressing to injections and eventually surgery if required. He also manages conditions like Ankylosing Spondylitis, Tendinopathy, and Back pain as part of his musculoskeletal practice.',
     conditions: [
-      'Osteoarthritis',
-      'Rheumatoid arthritis',
-      'Psoriatic arthritis',
-      'Gout',
-      'Post-traumatic arthritis',
+      'Osteoarthritis of knee, hip, shoulder',
+      'Osteoporosis and fragility fractures',
+      'Rheumatoid arthritis — medical and surgical management',
+      'Ankylosing spondylitis',
+      'Tendinopathy (shoulder, knee, heel)',
+      'Back pain — mechanical and degenerative',
     ],
     benefits: [
-      'Customized treatment plans',
-      'Multi-modal approach',
-      'Focus on preserving joints',
-      'Pain management',
-      'Improved function',
+      'Staged approach — non-surgical to surgical',
+      'Personalised treatment plans based on severity',
+      'Injections (steroids, PRP) for appropriate cases',
+      'Surgical intervention when truly indicated',
+      'Long-term follow-up and monitoring',
     ],
-    recovery: 'Treatment is ongoing with regular monitoring. Many patients experience significant improvement within weeks to months.',
-  },
-  {
-    id: 'sports-injury',
-    title: 'Sports Injury Care',
-    subtitle: 'Get Back in the Game',
-    description: 'Specialized care for athletes and active individuals suffering from sports-related injuries. Our goal is to help you return to your sport safely and quickly.',
-    conditions: [
-      'ACL/PCL tears',
-      'Meniscus injuries',
-      'Rotator cuff tears',
-      'Tennis/Golfer\'s elbow',
-      'Ankle sprains and fractures',
-      'Muscle strains',
-    ],
-    benefits: [
-      'Sports-specific rehabilitation',
-      'Arthroscopic surgery options',
-      'Quick return to sport',
-      'Injury prevention guidance',
-      'Performance optimization',
-    ],
-    recovery: 'Recovery depends on the injury. ACL reconstruction typically requires 6-9 months before returning to sports.',
-  },
-  {
-    id: 'trauma',
-    title: 'Trauma & Fracture Surgery',
-    subtitle: 'Expert Fracture Care',
-    description: 'Comprehensive treatment for all types of fractures and musculoskeletal trauma, from simple fractures to complex polytrauma cases requiring multiple surgeries.',
-    conditions: [
-      'Simple and complex fractures',
-      'Open fractures',
-      'Pelvic fractures',
-      'Spine fractures',
-      'Polytrauma',
-    ],
-    benefits: [
-      '24/7 emergency care',
-      'Modern fixation techniques',
-      'Minimally invasive when possible',
-      'Early mobilization protocols',
-      'Comprehensive rehabilitation',
-    ],
-    recovery: 'Healing times vary by fracture type and location. Most simple fractures heal in 6-8 weeks.',
-  },
-  {
-    id: 'joint-preservation',
-    title: 'Joint Preservation',
-    subtitle: 'Save Your Natural Joints',
-    description: 'Innovative techniques to preserve and repair damaged joints, delaying or avoiding the need for joint replacement surgery, especially in younger patients.',
-    conditions: [
-      'Early-stage arthritis',
-      'Cartilage injuries',
-      'Meniscal tears',
-      'Labral tears',
-      'Joint instability',
-    ],
-    benefits: [
-      'Preserve natural joint',
-      'Delay joint replacement',
-      'Biological solutions',
-      'Minimally invasive',
-      'Faster recovery',
-    ],
-    recovery: 'Recovery varies by procedure. Many patients return to activities within 4-6 weeks.',
-  },
-  {
-    id: 'rehabilitation',
-    title: 'Rehabilitation Support',
-    subtitle: 'Complete Recovery Programs',
-    description: 'Comprehensive post-operative and non-operative rehabilitation programs designed to optimize recovery, restore function, and prevent future injuries.',
-    conditions: [
-      'Post-surgical rehabilitation',
-      'Sports injury rehab',
-      'Chronic pain management',
-      'Mobility restoration',
-      'Strength rebuilding',
-    ],
-    benefits: [
-      'Customized programs',
-      'Expert physiotherapy guidance',
-      'Home exercise programs',
-      'Progress monitoring',
-      'Ongoing support',
-    ],
-    recovery: 'Rehabilitation is tailored to each patient\'s needs and goals. Programs typically last 4-12 weeks.',
+    recovery: 'Non-surgical management often shows improvement within 4–8 weeks. Surgical interventions follow procedure-specific timelines with structured rehabilitation.',
   },
 ]
 
@@ -189,7 +151,6 @@ export default function ServicesPage() {
     <main>
       <Header />
       
-      {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-muted via-background to-muted">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm font-medium uppercase tracking-wider text-secondary mb-3">
@@ -199,13 +160,12 @@ export default function ServicesPage() {
             Comprehensive Orthopedic Care
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            From joint replacement to spine surgery, sports medicine to trauma care, 
-            we offer a complete range of orthopedic services tailored to your individual needs.
+            From complex trauma and joint replacement to spine surgery, arthroscopy, and sports medicine — 
+            Dr. Soutrik Mukherjee offers a complete range of orthopedic care at Advanced Ortho and Spine Clinic, Lake Town.
           </p>
         </div>
       </section>
 
-      {/* Services List */}
       <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-20">
@@ -213,9 +173,7 @@ export default function ServicesPage() {
               <div 
                 key={service.id}
                 id={service.id}
-                className={`grid lg:grid-cols-2 gap-12 items-start ${
-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
-                }`}
+                className="grid lg:grid-cols-2 gap-12 items-start"
               >
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
                   <p className="text-sm font-medium uppercase tracking-wider text-secondary mb-2">
@@ -229,7 +187,7 @@ export default function ServicesPage() {
                   </p>
                   
                   <div className="bg-muted/50 rounded-xl p-6 mb-6">
-                    <h3 className="font-semibold text-foreground mb-3">Recovery Information</h3>
+                    <h3 className="font-semibold text-foreground mb-2">Recovery & Timeline</h3>
                     <p className="text-sm text-muted-foreground">{service.recovery}</p>
                   </div>
 
@@ -255,7 +213,7 @@ export default function ServicesPage() {
                   </div>
 
                   <div className="bg-primary/5 border border-primary/10 rounded-xl p-6">
-                    <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
+                    <h3 className="font-semibold text-foreground mb-4">Why Choose Dr. Mukherjee</h3>
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, i) => (
                         <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">

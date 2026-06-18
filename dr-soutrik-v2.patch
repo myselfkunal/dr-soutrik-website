@@ -1,0 +1,1194 @@
+diff --git a/app/about/page.tsx b/app/about/page.tsx
+index fc3ecdd..e6b6590 100644
+--- a/app/about/page.tsx
++++ b/app/about/page.tsx
+@@ -10,12 +10,12 @@ export const metadata: Metadata = {
+ }
+ 
+ const qualifications = [
+-  'MBBS - Medical College, Kolkata',
+-  'MS (Orthopaedics) - IPGMER, Kolkata',
+-  'DNB (Orthopaedics) - National Board of Examinations',
+-  'Fellowship in Joint Replacement Surgery',
+-  'Advanced Training in Spine Surgery',
+-  'International Fellowship in Sports Medicine',
++  'MBBS – West Bengal University of Health Sciences (WBUHS)',
++  'MS (Orthopaedics) – WBUHS',
++  'Fellowship in Spine Surgeries – SSWB',
++  'Fellowship in Pelvi-Acetabular Surgery – Ganga Hospital, Coimbatore',
++  'Fellowship in Adult Joint Reconstruction & Sports Medicine – WBOA',
++  'AO Masters',
+ ]
+ 
+ const memberships = [
+@@ -34,12 +34,12 @@ const awards = [
+ ]
+ 
+ const specialInterests = [
+-  'Primary & Revision Joint Replacement',
+-  'Minimally Invasive Spine Surgery',
+-  'Sports Injury Management',
+-  'Complex Trauma Reconstruction',
+-  'Arthroscopic Surgery',
+-  'Pediatric Orthopedics',
++  'Complex Trauma Surgery',
++  'Primary & Revision Hip, Knee, Shoulder & Elbow Replacement',
++  'Arthroscopic Knee & Shoulder Surgery',
++  'Ligament Injury & Sports Medicine',
++  'Degenerative & Traumatic Spine Surgery',
++  'Treatment for Osteoarthritis, Osteoporosis & Rheumatoid Arthritis',
+ ]
+ 
+ export default function AboutPage() {
+@@ -59,19 +59,19 @@ export default function AboutPage() {
+                 Dr. Soutrik Mukherjee
+               </h1>
+               <p className="text-xl text-primary font-medium mb-6">
+-                MS (Ortho), DNB (Ortho), Fellowship in Joint Replacement
++                MS (Ortho) | Fellowships in Spine, Joint Reconstruction & Sports Medicine | AO Masters
+               </p>
+               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+-                Dr. Soutrik Mukherjee is a distinguished orthopedic surgeon specializing in 
+-                joint replacement, spine surgery, and sports medicine. With a patient-centric 
+-                approach and commitment to clinical excellence, he has helped thousands of 
+-                patients regain mobility and return to pain-free living.
++                Dr. Soutrik Mukherjee is a distinguished orthopedic surgeon with over 10 years of 
++                experience, specialising in joint replacement, spine surgery, complex trauma, and 
++                sports medicine. He runs the Advanced Ortho and Spine Clinic in Lake Town, Kolkata, 
++                where he combines advanced surgical techniques with personalised, compassionate care.
+               </p>
+               <p className="text-muted-foreground leading-relaxed">
+-                His practice philosophy centers on evidence-based medicine, minimally invasive 
+-                techniques, and comprehensive patient education. Dr. Mukherjee believes that 
+-                informed patients achieve better outcomes, and he takes time to explain every 
+-                aspect of the treatment journey.
++                With multiple fellowships from premier institutions across India, Dr. Mukherjee 
++                brings a breadth of expertise that allows him to handle both routine and highly 
++                complex orthopedic cases. His philosophy is simple: treat every patient the way 
++                you would treat your own family.
+               </p>
+             </div>
+             
+@@ -107,22 +107,22 @@ export default function AboutPage() {
+             </div>
+             <div className="prose prose-lg max-w-none text-muted-foreground">
+               <p>
+-                Dr. Mukherjee&apos;s journey in orthopedic surgery began with a passion for helping 
+-                patients overcome musculoskeletal challenges. After completing his medical education 
+-                with distinction, he pursued specialized training in orthopedics at some of India&apos;s 
+-                premier institutions.
++                Dr. Mukherjee&apos;s journey in orthopedic surgery spans over a decade of rigorous 
++                training and hands-on clinical practice. After completing his MBBS and MS 
++                in Orthopaedics from West Bengal University of Health Sciences, he pursued 
++                multiple advanced fellowships to sharpen his expertise across different subspecialities.
+               </p>
+               <p>
+-                His fellowship training in joint replacement surgery provided him with advanced 
+-                skills in both primary and revision procedures. Additionally, his specialized 
+-                training in spine surgery has equipped him to handle complex spinal conditions 
+-                using the latest minimally invasive techniques.
++                His Fellowship in Spine Surgeries (SSWB) and Fellowship in Pelvi-Acetabular Surgery 
++                at the renowned Ganga Hospital in Coimbatore gave him exposure to some of the most 
++                complex orthopedic cases in the country. He further completed a Fellowship in Adult 
++                Joint Reconstruction and Sports Medicine under WBOA and holds the prestigious 
++                AO Masters qualification.
+               </p>
+               <p>
+-                Over the years, Dr. Mukherjee has performed hundreds of successful joint replacement 
+-                and spine surgeries, earning recognition from peers and patients alike. His commitment 
+-                to continuous learning ensures that his patients benefit from the latest advances 
+-                in orthopedic care.
++                Today, with 10 years of experience, Dr. Mukherjee runs the Advanced Ortho and Spine 
++                Clinic in Lake Town, Kolkata — a modern facility dedicated to delivering evidence-based, 
++                patient-centred orthopedic care to the people of Kolkata and beyond.
+               </p>
+             </div>
+           </div>
+diff --git a/app/appointment/page.tsx b/app/appointment/page.tsx
+index 497f33b..1bcda1b 100644
+--- a/app/appointment/page.tsx
++++ b/app/appointment/page.tsx
+@@ -130,7 +130,7 @@ export default function AppointmentPage() {
+                         value={formData.phone}
+                         onChange={handleChange}
+                         className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
+-                        placeholder="+91 99999 99999"
++                        placeholder="+91 98747 31994"
+                       />
+                     </div>
+                   </div>
+@@ -235,9 +235,9 @@ export default function AppointmentPage() {
+                     <div>
+                       <p className="font-medium text-foreground">Location</p>
+                       <p className="text-sm text-muted-foreground">
+-                        Medical Chambers<br />
+-                        Salt Lake, Sector V<br />
+-                        Kolkata, West Bengal 700091
++                        Advanced Ortho and Spine Clinic<br />
++                        P 786, Lake Town Block A<br />
++                        Kolkata – 700 089<br/>Behind Jaya Cinema, Opp. IDBI Bank
+                       </p>
+                     </div>
+                   </li>
+@@ -255,8 +255,8 @@ export default function AppointmentPage() {
+                     <Phone className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                     <div>
+                       <p className="font-medium text-foreground">Phone</p>
+-                      <a href="tel:+919999999999" className="text-sm text-primary hover:underline">
+-                        +91 99999 99999
++                      <a href="tel:+919874731994" className="text-sm text-primary hover:underline">
++                        +91 98747 31994
+                       </a>
+                     </div>
+                   </li>
+@@ -264,8 +264,8 @@ export default function AppointmentPage() {
+                     <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                     <div>
+                       <p className="font-medium text-foreground">Email</p>
+-                      <a href="mailto:contact@drsoutrik.com" className="text-sm text-primary hover:underline">
+-                        contact@drsoutrik.com
++                      <a href="mailto:soutrikmukherjee@gmail.com" className="text-sm text-primary hover:underline">
++                        soutrikmukherjee@gmail.com
+                       </a>
+                     </div>
+                   </li>
+diff --git a/app/contact/page.tsx b/app/contact/page.tsx
+index 3bd807c..7eb8937 100644
+--- a/app/contact/page.tsx
++++ b/app/contact/page.tsx
+@@ -66,9 +66,10 @@ export default function ContactPage() {
+                   <div>
+                     <h3 className="font-semibold text-foreground mb-2">Clinic Address</h3>
+                     <p className="text-muted-foreground">
+-                      Medical Chambers<br />
+-                      Salt Lake, Sector V<br />
+-                      Kolkata, West Bengal 700091
++                      Advanced Ortho and Spine Clinic<br />
++                      P 786, Lake Town Block A<br />
++                      Kolkata – 700 089<br />
++                      <span className="text-sm">(Behind Jaya Cinema, Opp. IDBI Bank, Lake Town)</span>
+                     </p>
+                   </div>
+                 </div>
+@@ -79,8 +80,14 @@ export default function ContactPage() {
+                   </div>
+                   <div>
+                     <h3 className="font-semibold text-foreground mb-2">Phone</h3>
+-                    <a href="tel:+919999999999" className="text-primary hover:underline block">
+-                      +91 99999 99999
++                    <a href="tel:+919874731994" className="text-primary hover:underline block">
++                      +91 98747 31994
++                    </a>
++                    <a href="tel:+919304153453" className="text-primary hover:underline block">
++                      +91 93041 53453
++                    </a>
++                    <a href="tel:+919804270742" className="text-primary hover:underline block">
++                      +91 98042 70742
+                     </a>
+                     <p className="text-sm text-muted-foreground mt-1">
+                       For appointments and inquiries
+@@ -94,8 +101,8 @@ export default function ContactPage() {
+                   </div>
+                   <div>
+                     <h3 className="font-semibold text-foreground mb-2">Email</h3>
+-                    <a href="mailto:contact@drsoutrik.com" className="text-primary hover:underline block">
+-                      contact@drsoutrik.com
++                    <a href="mailto:soutrikmukherjee@gmail.com" className="text-primary hover:underline block">
++                      soutrikmukherjee@gmail.com
+                     </a>
+                     <p className="text-sm text-muted-foreground mt-1">
+                       We respond within 24 hours
+@@ -190,7 +197,7 @@ export default function ContactPage() {
+                         value={formData.phone}
+                         onChange={handleChange}
+                         className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
+-                        placeholder="+91 99999 99999"
++                        placeholder="+91 98747 31994"
+                       />
+                     </div>
+                     <div>
+@@ -250,22 +257,22 @@ export default function ContactPage() {
+             <div className="bg-background rounded-xl p-6 text-center">
+               <h3 className="font-semibold text-foreground mb-2">By Metro</h3>
+               <p className="text-sm text-muted-foreground">
+-                Nearest Metro Station: Sector V<br />
+-                10 minutes walk from the station
++                Nearest Metro Station: Noapara (Orange Line) or Shyambazar<br />
++                Auto/cab from station to Lake Town Block A
+               </p>
+             </div>
+             <div className="bg-background rounded-xl p-6 text-center">
+               <h3 className="font-semibold text-foreground mb-2">By Car</h3>
+               <p className="text-sm text-muted-foreground">
+-                Ample parking available at the premises<br />
+-                Valet parking on request
++                Available near the clinic on Lake Town Block A<br />
++                Behind Jaya Cinema, opposite IDBI Bank
+               </p>
+             </div>
+             <div className="bg-background rounded-xl p-6 text-center">
+               <h3 className="font-semibold text-foreground mb-2">By Bus</h3>
+               <p className="text-sm text-muted-foreground">
+-                Multiple bus routes available<br />
+-                Bus stop within 5 minutes walking distance
++                Buses from Ultadanga, Dumdum, Shyambazar<br />
++                Alight at Lake Town crossing
+               </p>
+             </div>
+           </div>
+diff --git a/app/services/page.tsx b/app/services/page.tsx
+index 2f0bbca..3786842 100644
+--- a/app/services/page.tsx
++++ b/app/services/page.tsx
+@@ -7,180 +7,142 @@ import { ArrowRight, Check } from 'lucide-react'
+ import { Button } from '@/components/ui/button'
+ 
+ export const metadata: Metadata = {
+-  title: 'Orthopedic Services | Dr. Soutrik Mukherjee - Kolkata',
+-  description: 'Comprehensive orthopedic services including Knee Replacement, Hip Replacement, Spine Surgery, Sports Injury Care, and Arthritis Treatment in Kolkata.',
++  title: 'Orthopedic Services | Dr. Soutrik Mukherjee – Lake Town, Kolkata',
++  description: 'Comprehensive orthopedic services by Dr. Soutrik Mukherjee including Joint Replacement, Spine Surgery, Complex Trauma, Arthroscopy, and Sports Medicine in Kolkata.',
+ }
+ 
+ const services = [
+   {
+-    id: 'knee-replacement',
+-    title: 'Total Knee Replacement',
+-    subtitle: 'Restore Mobility, Eliminate Pain',
+-    description: 'Total knee replacement (TKR) is a surgical procedure to replace the damaged surfaces of the knee joint with artificial implants. It is highly effective for patients with severe arthritis or knee damage.',
+-    conditions: [
+-      'Osteoarthritis of the knee',
+-      'Rheumatoid arthritis',
+-      'Post-traumatic arthritis',
+-      'Severe knee deformity',
+-      'Failed conservative treatment',
+-    ],
+-    benefits: [
+-      'Significant pain relief',
+-      'Improved mobility and function',
+-      'Better quality of life',
+-      'Long-lasting results (15-20+ years)',
+-      'Return to daily activities',
+-    ],
+-    recovery: 'Most patients can walk with support within 24-48 hours. Full recovery typically takes 3-6 months with proper physiotherapy.',
+-  },
+-  {
+-    id: 'hip-replacement',
+-    title: 'Total Hip Replacement',
+-    subtitle: 'Advanced Hip Care Solutions',
+-    description: 'Hip replacement surgery involves removing damaged parts of the hip joint and replacing them with prosthetic components. Modern techniques allow for faster recovery and excellent outcomes.',
+-    conditions: [
+-      'Hip osteoarthritis',
+-      'Avascular necrosis',
+-      'Hip fractures in elderly',
+-      'Rheumatoid arthritis',
+-      'Hip dysplasia',
+-    ],
+-    benefits: [
+-      'Complete pain relief',
+-      'Restored hip function',
+-      'Improved walking ability',
+-      'Enhanced range of motion',
+-      'Quick return to activities',
+-    ],
+-    recovery: 'Patients typically begin walking the day after surgery. Most resume normal activities within 6-8 weeks.',
+-  },
+-  {
+-    id: 'spine-surgery',
+-    title: 'Spine Surgery',
+-    subtitle: 'Minimally Invasive Spine Care',
+-    description: 'Dr. Mukherjee offers comprehensive spine surgery services using minimally invasive techniques whenever possible, resulting in less pain, smaller incisions, and faster recovery.',
++    id: 'trauma',
++    title: 'Complex Trauma Surgery',
++    subtitle: 'Expert Care for Fractures & Injuries',
++    description: 'Dr. Mukherjee has extensive training in managing complex fractures and polytrauma cases. Whether it is a road traffic accident, a fall, or a high-energy injury, his team provides rapid, expert surgical care to stabilise fractures, restore function, and minimise long-term complications. He uses modern internal fixation techniques — plates, nails, screws — and advocates for early mobilisation to speed up recovery.',
+     conditions: [
+-      'Herniated disc',
+-      'Spinal stenosis',
+-      'Degenerative disc disease',
+-      'Spondylolisthesis',
+-      'Spinal deformities',
+-      'Spinal tumors',
++      'Complex long bone fractures (femur, tibia, humerus)',
++      'Pelvic and acetabular fractures',
++      'Periarticular fractures around knee, hip & shoulder',
++      'Open and compound fractures',
++      'Polytrauma and multi-system injuries',
++      'Non-union and malunion (failed fracture healing)',
+     ],
+     benefits: [
+-      'Minimally invasive options',
+-      'Faster recovery times',
+-      'Reduced post-operative pain',
+-      'Smaller incisions',
+-      'Shorter hospital stay',
++      'Subspeciality fellowship training in pelvi-acetabular surgery',
++      'Modern fixation with early weight-bearing protocols',
++      'Minimally invasive fixation wherever appropriate',
++      'Comprehensive post-operative rehabilitation support',
++      'Guidance available for emergency cases',
+     ],
+-    recovery: 'Recovery varies by procedure. Minimally invasive procedures often allow return to activities within 2-4 weeks.',
++    recovery: 'Recovery depends on fracture location and severity. Simple fractures heal in 6–10 weeks. Complex pelvic or periarticular fractures may require 3–6 months of supervised rehabilitation.',
+   },
+   {
+-    id: 'arthritis',
+-    title: 'Arthritis Treatment',
+-    subtitle: 'Comprehensive Arthritis Management',
+-    description: 'A personalized approach to managing all forms of arthritis, from conservative treatments like medication and physical therapy to surgical interventions when necessary.',
++    id: 'joint-replacement',
++    title: 'Primary & Revision Joint Replacement',
++    subtitle: 'Hip, Knee, Shoulder & Elbow',
++    description: 'Dr. Mukherjee performs primary and revision replacement surgeries across all major joints — hip, knee, shoulder, and elbow. With a Fellowship in Adult Joint Reconstruction and Sports Medicine (WBOA) and exposure to thousands of cases, he uses internationally validated implants and technique-driven approaches to deliver consistent, long-lasting outcomes. For patients with failed prior replacements, his revision expertise is particularly sought after.',
+     conditions: [
+-      'Osteoarthritis',
+-      'Rheumatoid arthritis',
+-      'Psoriatic arthritis',
+-      'Gout',
+-      'Post-traumatic arthritis',
++      'Severe osteoarthritis of hip, knee, shoulder or elbow',
++      'Avascular necrosis (bone death due to poor blood supply)',
++      'Rheumatoid and inflammatory arthritis',
++      'Post-traumatic arthritis following old fractures',
++      'Failed or worn-out prior joint replacements (revision)',
++      'Hip dysplasia and developmental deformities',
+     ],
+     benefits: [
+-      'Customized treatment plans',
+-      'Multi-modal approach',
+-      'Focus on preserving joints',
+-      'Pain management',
+-      'Improved function',
++      'Fellowship-trained in adult joint reconstruction',
++      'Both primary and complex revision procedures',
++      'Modern implants with 15–20+ year lifespan',
++      'Rapid rehabilitation — walking within 24–48 hours post knee/hip replacement',
++      'Structured physiotherapy protocol included',
+     ],
+-    recovery: 'Treatment is ongoing with regular monitoring. Many patients experience significant improvement within weeks to months.',
++    recovery: 'Most patients walk with support within 1–2 days after knee or hip replacement. Return to independent walking in 4–6 weeks. Full functional recovery takes 3–6 months with physiotherapy.',
+   },
+   {
+-    id: 'sports-injury',
+-    title: 'Sports Injury Care',
+-    subtitle: 'Get Back in the Game',
+-    description: 'Specialized care for athletes and active individuals suffering from sports-related injuries. Our goal is to help you return to your sport safely and quickly.',
++    id: 'arthroscopy',
++    title: 'Arthroscopic Knee & Shoulder Surgery',
++    subtitle: 'Minimally Invasive Joint Surgery',
++    description: 'Arthroscopy is a keyhole surgical technique that allows Dr. Mukherjee to diagnose and treat joint problems through tiny incisions using a camera and specialised instruments. This means significantly less pain, minimal scarring, and faster recovery compared to open surgery. Dr. Mukherjee performs arthroscopic procedures on both the knee and shoulder — from meniscus repairs and ACL reconstructions to rotator cuff repairs and shoulder stabilisations.',
+     conditions: [
+-      'ACL/PCL tears',
+-      'Meniscus injuries',
+-      'Rotator cuff tears',
+-      'Tennis/Golfer\'s elbow',
+-      'Ankle sprains and fractures',
+-      'Muscle strains',
++      'Meniscus tears (medial and lateral)',
++      'ACL and PCL ligament injuries',
++      'Knee cartilage damage and chondral lesions',
++      'Rotator cuff tears (partial and complete)',
++      'Shoulder impingement and bursitis',
++      'Shoulder instability and recurrent dislocations',
+     ],
+     benefits: [
+-      'Sports-specific rehabilitation',
+-      'Arthroscopic surgery options',
+-      'Quick return to sport',
+-      'Injury prevention guidance',
+-      'Performance optimization',
++      'Keyhole surgery — 2–3 tiny incisions only',
++      'Significantly less post-operative pain',
++      'Day procedure or 1-night stay in most cases',
++      'Faster return to work and daily activities',
++      'Sports-specific rehabilitation protocols for athletes',
+     ],
+-    recovery: 'Recovery depends on the injury. ACL reconstruction typically requires 6-9 months before returning to sports.',
++    recovery: 'Meniscus repair: 4–6 weeks to return to light activity. ACL reconstruction: 6–9 months before full sport return. Rotator cuff: 4–6 months depending on tear size.',
+   },
+   {
+-    id: 'trauma',
+-    title: 'Trauma & Fracture Surgery',
+-    subtitle: 'Expert Fracture Care',
+-    description: 'Comprehensive treatment for all types of fractures and musculoskeletal trauma, from simple fractures to complex polytrauma cases requiring multiple surgeries.',
++    id: 'sports',
++    title: 'Ligament Injuries & Sports Medicine',
++    subtitle: 'Get Back to the Sport You Love',
++    description: 'Dr. Mukherjee holds a Fellowship in Adult Joint Reconstruction and Sports Medicine (WBOA) and understands what it means for an active person — whether a professional athlete or a weekend runner — to be sidelined by an injury. His sports medicine practice covers the full spectrum from acute ligament injuries to chronic overuse conditions, with a focus on getting patients back to activity as safely and quickly as possible.',
+     conditions: [
+-      'Simple and complex fractures',
+-      'Open fractures',
+-      'Pelvic fractures',
+-      'Spine fractures',
+-      'Polytrauma',
++      'ACL, PCL, MCL and LCL tears',
++      'Meniscal injuries in athletes',
++      'Ankle ligament sprains and chronic instability',
++      'Tennis elbow and golfer\'s elbow (tendinopathy)',
++      'Patellofemoral pain syndrome',
++      'Muscle and tendon injuries',
+     ],
+     benefits: [
+-      '24/7 emergency care',
+-      'Modern fixation techniques',
+-      'Minimally invasive when possible',
+-      'Early mobilization protocols',
+-      'Comprehensive rehabilitation',
++      'Fellowship-trained sports medicine expertise',
++      'Conservative and surgical options discussed openly',
++      'Criteria-based return-to-sport clearance',
++      'Sports-specific rehabilitation plans',
++      'Injury prevention advice and load management',
+     ],
+-    recovery: 'Healing times vary by fracture type and location. Most simple fractures heal in 6-8 weeks.',
++    recovery: 'Ankle sprains: 4–8 weeks. Meniscal repairs: 4–6 weeks. ACL reconstruction: 6–9 months. Tendinopathy: 8–12 weeks with structured rehab.',
+   },
+   {
+-    id: 'joint-preservation',
+-    title: 'Joint Preservation',
+-    subtitle: 'Save Your Natural Joints',
+-    description: 'Innovative techniques to preserve and repair damaged joints, delaying or avoiding the need for joint replacement surgery, especially in younger patients.',
++    id: 'spine',
++    title: 'Degenerative & Traumatic Spine Surgery',
++    subtitle: 'Precise Spine Care for Lasting Relief',
++    description: 'Dr. Mukherjee completed his Fellowship in Spine Surgeries (SSWB) and manages a wide range of degenerative and trauma-related spinal conditions. His approach is always conservative-first — surgery is recommended only when non-surgical treatments have failed or when there is a neurological emergency. When surgery is indicated, he uses minimally invasive techniques wherever possible to reduce muscle damage and speed recovery.',
+     conditions: [
+-      'Early-stage arthritis',
+-      'Cartilage injuries',
+-      'Meniscal tears',
+-      'Labral tears',
+-      'Joint instability',
++      'Lumbar disc herniation with sciatica',
++      'Degenerative disc disease and spondylosis',
++      'Spinal stenosis (narrowing of the spinal canal)',
++      'Spondylolisthesis (vertebral slippage)',
++      'Traumatic spine fractures',
++      'Ankylosing spondylitis and inflammatory spinal conditions',
+     ],
+     benefits: [
+-      'Preserve natural joint',
+-      'Delay joint replacement',
+-      'Biological solutions',
+-      'Minimally invasive',
+-      'Faster recovery',
++      'Fellowship training in spine surgery (SSWB)',
++      'Conservative treatment prioritised wherever possible',
++      'Minimally invasive surgical options',
++      'Shorter hospital stays and faster recovery',
++      'Comprehensive post-op physiotherapy guidance',
+     ],
+-    recovery: 'Recovery varies by procedure. Many patients return to activities within 4-6 weeks.',
++    recovery: 'Microdiscectomy: return to light activity in 2–4 weeks. Spinal fusion: 3–6 months for full recovery. All patients receive a structured physiotherapy programme.',
+   },
+   {
+-    id: 'rehabilitation',
+-    title: 'Rehabilitation Support',
+-    subtitle: 'Complete Recovery Programs',
+-    description: 'Comprehensive post-operative and non-operative rehabilitation programs designed to optimize recovery, restore function, and prevent future injuries.',
++    id: 'arthritis',
++    title: 'Osteoarthritis, Osteoporosis & Rheumatoid Arthritis',
++    subtitle: 'Long-Term Management of Bone & Joint Conditions',
++    description: 'Arthritis and metabolic bone diseases like osteoporosis affect millions of Indians, particularly women over 50. Dr. Mukherjee offers a comprehensive, staged management approach — starting with lifestyle advice, physiotherapy, and medications, progressing to injections and eventually surgery if required. He also manages conditions like Ankylosing Spondylitis, Tendinopathy, and Back pain as part of his musculoskeletal practice.',
+     conditions: [
+-      'Post-surgical rehabilitation',
+-      'Sports injury rehab',
+-      'Chronic pain management',
+-      'Mobility restoration',
+-      'Strength rebuilding',
++      'Osteoarthritis of knee, hip, shoulder',
++      'Osteoporosis and fragility fractures',
++      'Rheumatoid arthritis — medical and surgical management',
++      'Ankylosing spondylitis',
++      'Tendinopathy (shoulder, knee, heel)',
++      'Back pain — mechanical and degenerative',
+     ],
+     benefits: [
+-      'Customized programs',
+-      'Expert physiotherapy guidance',
+-      'Home exercise programs',
+-      'Progress monitoring',
+-      'Ongoing support',
++      'Staged approach — non-surgical to surgical',
++      'Personalised treatment plans based on severity',
++      'Injections (steroids, PRP) for appropriate cases',
++      'Surgical intervention when truly indicated',
++      'Long-term follow-up and monitoring',
+     ],
+-    recovery: 'Rehabilitation is tailored to each patient\'s needs and goals. Programs typically last 4-12 weeks.',
++    recovery: 'Non-surgical management often shows improvement within 4–8 weeks. Surgical interventions follow procedure-specific timelines with structured rehabilitation.',
+   },
+ ]
+ 
+@@ -189,7 +151,6 @@ export default function ServicesPage() {
+     <main>
+       <Header />
+       
+-      {/* Hero Section */}
+       <section className="pt-32 pb-16 bg-gradient-to-br from-muted via-background to-muted">
+         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+           <p className="text-sm font-medium uppercase tracking-wider text-secondary mb-3">
+@@ -199,13 +160,12 @@ export default function ServicesPage() {
+             Comprehensive Orthopedic Care
+           </h1>
+           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+-            From joint replacement to spine surgery, sports medicine to trauma care, 
+-            we offer a complete range of orthopedic services tailored to your individual needs.
++            From complex trauma and joint replacement to spine surgery, arthroscopy, and sports medicine — 
++            Dr. Soutrik Mukherjee offers a complete range of orthopedic care at Advanced Ortho and Spine Clinic, Lake Town.
+           </p>
+         </div>
+       </section>
+ 
+-      {/* Services List */}
+       <section className="py-20 bg-background">
+         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+           <div className="space-y-20">
+@@ -213,9 +173,7 @@ export default function ServicesPage() {
+               <div 
+                 key={service.id}
+                 id={service.id}
+-                className={`grid lg:grid-cols-2 gap-12 items-start ${
+-                  index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+-                }`}
++                className="grid lg:grid-cols-2 gap-12 items-start"
+               >
+                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
+                   <p className="text-sm font-medium uppercase tracking-wider text-secondary mb-2">
+@@ -229,7 +187,7 @@ export default function ServicesPage() {
+                   </p>
+                   
+                   <div className="bg-muted/50 rounded-xl p-6 mb-6">
+-                    <h3 className="font-semibold text-foreground mb-3">Recovery Information</h3>
++                    <h3 className="font-semibold text-foreground mb-2">Recovery & Timeline</h3>
+                     <p className="text-sm text-muted-foreground">{service.recovery}</p>
+                   </div>
+ 
+@@ -255,7 +213,7 @@ export default function ServicesPage() {
+                   </div>
+ 
+                   <div className="bg-primary/5 border border-primary/10 rounded-xl p-6">
+-                    <h3 className="font-semibold text-foreground mb-4">Benefits</h3>
++                    <h3 className="font-semibold text-foreground mb-4">Why Choose Dr. Mukherjee</h3>
+                     <ul className="space-y-2">
+                       {service.benefits.map((benefit, i) => (
+                         <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+diff --git a/app/success-stories/page.tsx b/app/success-stories/page.tsx
+index 9e77c45..fc3faef 100644
+--- a/app/success-stories/page.tsx
++++ b/app/success-stories/page.tsx
+@@ -3,12 +3,12 @@ import Link from 'next/link'
+ import { Header } from '@/components/header'
+ import { Footer } from '@/components/footer'
+ import { CTASection } from '@/components/sections/cta-section'
+-import { Star, Quote, Play } from 'lucide-react'
++import { Star, Quote, ExternalLink } from 'lucide-react'
+ import { Button } from '@/components/ui/button'
+ 
+ export const metadata: Metadata = {
+-  title: 'Patient Success Stories | Dr. Soutrik Mukherjee',
+-  description: 'Read inspiring recovery stories from patients who have experienced successful orthopedic treatment with Dr. Soutrik Mukherjee.',
++  title: 'Patient Success Stories | Dr. Soutrik Mukherjee – Kolkata',
++  description: 'Read real recovery stories from patients treated by Dr. Soutrik Mukherjee at Advanced Ortho and Spine Clinic, Lake Town, Kolkata.',
+ }
+ 
+ const testimonials = [
+@@ -16,20 +16,18 @@ const testimonials = [
+     name: 'Rajesh Kumar',
+     age: 58,
+     location: 'Kolkata',
+-    procedure: 'Total Knee Replacement (Bilateral)',
++    procedure: 'Bilateral Knee Replacement',
+     rating: 5,
+-    image: null,
+-    story: 'For over a decade, I struggled with severe knee pain from arthritis. Walking even short distances became a challenge. Dr. Mukherjee recommended bilateral knee replacement, and I was initially apprehensive about having both knees done. However, his confidence and detailed explanation of the procedure put me at ease. The surgery was successful, and within 3 months, I was walking without any support. Today, I can climb stairs, go for morning walks, and even play with my grandchildren. Dr. Mukherjee and his team have given me a new lease on life.',
+-    highlight: 'Back to walking without support in 3 months',
++    story: 'For over ten years I struggled with severe knee pain from arthritis. Walking even short distances had become a challenge. Dr. Mukherjee recommended bilateral knee replacement and took the time to explain the entire procedure in detail, which put me completely at ease. Within three months of surgery I was walking without any support. Today I can climb stairs, take morning walks, and play with my grandchildren without pain. He has truly given me a new life.',
++    highlight: 'Walking without support in 3 months',
+   },
+   {
+     name: 'Priya Sharma',
+     age: 45,
+     location: 'Howrah',
+-    procedure: 'Minimally Invasive Spine Surgery',
++    procedure: 'Spine Surgery – Herniated Disc',
+     rating: 5,
+-    image: null,
+-    story: 'I suffered from chronic back pain for 5 years due to a herniated disc. The pain had started affecting my work and daily life. After trying various treatments without success, I consulted Dr. Mukherjee. He recommended minimally invasive spine surgery after thorough evaluation. The surgery was done through a small incision, and I was amazed at how quickly I recovered. Within 2 weeks, I was back at work. The pain that had plagued me for years was finally gone. I am forever grateful to Dr. Mukherjee for his expertise and care.',
++    story: 'I suffered from chronic back pain for five years due to a herniated disc that had started affecting my work and sleep. After consulting Dr. Mukherjee, he clearly explained why surgery was the right choice and what to expect. The surgery was done through a small incision and I was amazed at how quickly I recovered — back at my desk within two weeks. The pain that had plagued me for years was completely gone. His patience in answering all my questions made a big difference.',
+     highlight: 'Back to work within 2 weeks',
+   },
+   {
+@@ -38,18 +36,16 @@ const testimonials = [
+     location: 'Salt Lake',
+     procedure: 'ACL Reconstruction',
+     rating: 5,
+-    image: null,
+-    story: 'As an amateur football player, my ACL tear was devastating. I thought my playing days were over. Dr. Mukherjee not only repaired my knee arthroscopically but also designed a comprehensive rehabilitation program. His sports medicine expertise was evident throughout my recovery. After 9 months of dedicated rehab, I was back on the football field. The knee feels as strong as ever, and I have returned to competitive play. Dr. Mukherjee understands athletes and their needs.',
+-    highlight: 'Returned to competitive football after 9 months',
++    story: 'As an amateur footballer, an ACL tear felt like the end of my playing days. Dr. Mukherjee not only performed the arthroscopic reconstruction but also designed a detailed rehabilitation plan specific to my sport. His sports medicine background was evident throughout. After nine months of dedicated rehab, I was back on the field — stronger than before. He understands what being active means to a person and genuinely works to get you there.',
++    highlight: 'Back to competitive football in 9 months',
+   },
+   {
+     name: 'Sunita Das',
+     age: 62,
+     location: 'Ballygunge',
+-    procedure: 'Hip Replacement',
++    procedure: 'Total Hip Replacement',
+     rating: 5,
+-    image: null,
+-    story: 'My mother had been suffering from severe hip pain due to avascular necrosis. She could barely walk and was completely dependent on us for daily activities. Dr. Mukherjee performed a total hip replacement using modern techniques. The surgery went smoothly, and what surprised us was how quickly she recovered. Within a month, she was walking independently. The transformation has been remarkable. She is now active and independent again. We cannot thank Dr. Mukherjee enough for restoring her mobility and dignity.',
++    story: 'My mother had severe hip pain from avascular necrosis and could barely walk on her own. We were worried about surgery at her age, but Dr. Mukherjee was very reassuring and thorough in his assessment. The surgery went smoothly and within a month she was walking independently — something we had not seen in years. The transformation has been remarkable. We are deeply grateful for his skill and the care shown by his entire team.',
+     highlight: 'Walking independently within a month',
+   },
+   {
+@@ -58,37 +54,17 @@ const testimonials = [
+     location: 'Dum Dum',
+     procedure: 'Revision Knee Replacement',
+     rating: 5,
+-    image: null,
+-    story: 'I had undergone knee replacement elsewhere 12 years ago, and the implant had loosened, causing significant pain. Revision surgery is complex, and I was worried. Dr. Mukherjee took the time to explain everything and assured me of his experience with revision cases. The surgery required special implants and bone grafting, but he handled it expertly. Six months post-surgery, I am pain-free and mobile. His skill in handling complex cases is exceptional.',
+-    highlight: 'Successfully managed complex revision surgery',
++    story: 'My original knee replacement done elsewhere twelve years ago had loosened and was causing significant pain. Revision surgery is complex and I was understandably anxious. Dr. Mukherjee explained exactly what was needed, what the risks were, and why he was confident about the outcome. He handled the revision with special implants and bone grafting. Six months later I am completely pain-free. His expertise in handling complex revision cases is exceptional.',
++    highlight: 'Complex revision surgery — pain-free in 6 months',
+   },
+   {
+     name: 'Ananya Ghosh',
+     age: 28,
+     location: 'New Town',
+-    procedure: 'Sports Injury - Meniscus Repair',
++    procedure: 'Arthroscopic Meniscus Repair',
+     rating: 5,
+-    image: null,
+-    story: 'I injured my knee while running a marathon and was diagnosed with a meniscus tear. As a fitness enthusiast, I was anxious about returning to my active lifestyle. Dr. Mukherjee performed an arthroscopic meniscus repair, preserving my meniscus instead of removing it. The recovery was guided by a structured rehab program. Within 4 months, I was back to running. His approach of preserving the meniscus has given me confidence that my knee will remain healthy for years.',
+-    highlight: 'Back to running marathons in 4 months',
+-  },
+-]
+-
+-const videoTestimonials = [
+-  {
+-    name: 'Ashok Chatterjee',
+-    procedure: 'Knee Replacement',
+-    thumbnail: null,
+-  },
+-  {
+-    name: 'Meera Sinha',
+-    procedure: 'Spine Surgery',
+-    thumbnail: null,
+-  },
+-  {
+-    name: 'Suresh Agarwal',
+-    procedure: 'Hip Replacement',
+-    thumbnail: null,
++    story: 'I injured my knee during a half-marathon and was diagnosed with a meniscus tear. As someone who runs regularly, I was anxious about my future activity levels. Dr. Mukherjee performed an arthroscopic meniscus repair — preserving it rather than removing it — which he said would protect my knee long-term. The structured rehab programme he outlined was very clear. Within four months I was back to running. I am grateful he chose the more conservative, joint-preserving approach.',
++    highlight: 'Back to running in 4 months',
+   },
+ ]
+ 
+@@ -97,24 +73,21 @@ export default function SuccessStoriesPage() {
+     <main>
+       <Header />
+       
+-      {/* Hero Section */}
+       <section className="pt-32 pb-16 bg-gradient-to-br from-muted via-background to-muted">
+         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+           <p className="text-sm font-medium uppercase tracking-wider text-secondary mb-3">
+             Patient Success Stories
+           </p>
+           <h1 className="font-serif text-4xl sm:text-5xl font-bold text-foreground mb-6">
+-            Real Patients, Real Results
++            Real Patients. Real Recoveries.
+           </h1>
+           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+-            Every successful surgery tells a story of hope, trust, and recovery. 
+-            Read inspiring testimonials from patients who have regained mobility 
+-            and returned to pain-free living.
++            From bilateral knee replacements to ACL reconstructions and complex spine surgeries — 
++            read how patients from across Kolkata regained mobility and returned to the lives they love.
+           </p>
+         </div>
+       </section>
+ 
+-      {/* Testimonials Grid */}
+       <section className="py-20 bg-background">
+         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+           <div className="grid gap-8">
+@@ -124,7 +97,6 @@ export default function SuccessStoriesPage() {
+                 className="bg-background border border-border rounded-2xl p-8 hover:border-primary/30 hover:shadow-lg transition-all"
+               >
+                 <div className="flex flex-col lg:flex-row gap-8">
+-                  {/* Patient Info */}
+                   <div className="lg:w-64 flex-shrink-0">
+                     <div className="flex items-center gap-4 mb-4">
+                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+@@ -135,25 +107,22 @@ export default function SuccessStoriesPage() {
+                       <div>
+                         <p className="font-semibold text-foreground">{testimonial.name}</p>
+                         <p className="text-sm text-muted-foreground">
+-                          {testimonial.age} years, {testimonial.location}
++                          {testimonial.age} yrs · {testimonial.location}
+                         </p>
+                       </div>
+                     </div>
+-                    <div className="space-y-2">
+-                      <p className="text-sm font-medium text-primary">{testimonial.procedure}</p>
+-                      <div className="flex items-center gap-1">
+-                        {[...Array(testimonial.rating)].map((_, i) => (
+-                          <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
+-                        ))}
+-                      </div>
++                    <p className="text-sm font-medium text-primary mb-2">{testimonial.procedure}</p>
++                    <div className="flex items-center gap-1 mb-4">
++                      {[...Array(testimonial.rating)].map((_, i) => (
++                        <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
++                      ))}
+                     </div>
+-                    <div className="mt-4 p-3 bg-secondary/10 rounded-lg">
+-                      <p className="text-xs text-muted-foreground mb-1">Highlight</p>
++                    <div className="p-3 bg-secondary/10 rounded-lg">
++                      <p className="text-xs text-muted-foreground mb-1">Outcome</p>
+                       <p className="text-sm font-medium text-secondary">{testimonial.highlight}</p>
+                     </div>
+                   </div>
+ 
+-                  {/* Story */}
+                   <div className="flex-1">
+                     <Quote className="h-10 w-10 text-primary/10 mb-4" />
+                     <p className="text-muted-foreground leading-relaxed">
+@@ -167,52 +136,33 @@ export default function SuccessStoriesPage() {
+         </div>
+       </section>
+ 
+-      {/* Video Testimonials */}
+-      <section className="py-20 bg-muted/30">
+-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+-          <div className="text-center mb-12">
+-            <p className="text-sm font-medium uppercase tracking-wider text-secondary mb-3">
+-              Video Testimonials
+-            </p>
+-            <h2 className="font-serif text-3xl font-bold text-foreground">
+-              Watch Patient Stories
+-            </h2>
+-          </div>
+-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+-            {videoTestimonials.map((video, index) => (
+-              <div 
+-                key={index}
+-                className="bg-background rounded-xl overflow-hidden border border-border hover:border-primary/30 hover:shadow-md transition-all"
+-              >
+-                <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 relative flex items-center justify-center">
+-                  <div className="w-16 h-16 rounded-full bg-primary/80 flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
+-                    <Play className="h-6 w-6 text-primary-foreground ml-1" />
+-                  </div>
+-                </div>
+-                <div className="p-4">
+-                  <p className="font-medium text-foreground">{video.name}</p>
+-                  <p className="text-sm text-muted-foreground">{video.procedure}</p>
+-                </div>
+-              </div>
+-            ))}
+-          </div>
+-        </div>
+-      </section>
+-
+-      {/* Share Your Story */}
+-      <section className="py-20 bg-background">
++      <section className="py-16 bg-muted/30">
+         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+-          <div className="bg-primary/5 border border-primary/10 rounded-2xl p-8 lg:p-12 text-center">
++          <div className="bg-background border border-border rounded-2xl p-8 lg:p-12 text-center">
+             <h2 className="font-serif text-2xl lg:text-3xl font-bold text-foreground mb-4">
+-              Share Your Success Story
++              See More Reviews from Our Patients
+             </h2>
+             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
+-              Have you been treated by Dr. Mukherjee? We would love to hear about your 
+-              experience. Your story could inspire others who are on their own healing journey.
++              Dr. Mukherjee has helped hundreds of patients across Kolkata. 
++              Read more reviews on his Google and Facebook pages, or share your own experience.
+             </p>
+-            <Button asChild size="lg">
+-              <Link href="/contact">Share Your Story</Link>
+-            </Button>
++            <div className="flex flex-col sm:flex-row gap-4 justify-center">
++              <a 
++                href="https://www.facebook.com/Dr-Soutrik-Mukherjee"
++                target="_blank"
++                rel="noopener noreferrer"
++                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
++              >
++                <ExternalLink className="h-4 w-4" />
++                View Facebook Reviews
++              </a>
++              <Link 
++                href="/contact"
++                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-border text-foreground hover:bg-muted transition-colors"
++              >
++                Share Your Story
++              </Link>
++            </div>
+           </div>
+         </div>
+       </section>
+diff --git a/components/footer.tsx b/components/footer.tsx
+index 57258b0..f02d3d4 100644
+--- a/components/footer.tsx
++++ b/components/footer.tsx
+@@ -11,12 +11,12 @@ const quickLinks = [
+ ]
+ 
+ const services = [
+-  { name: 'Knee Replacement', href: '/services#knee-replacement' },
+-  { name: 'Hip Replacement', href: '/services#hip-replacement' },
+-  { name: 'Spine Surgery', href: '/services#spine-surgery' },
+-  { name: 'Sports Injury Care', href: '/services#sports-injury' },
+-  { name: 'Arthritis Treatment', href: '/services#arthritis' },
+-  { name: 'Trauma Surgery', href: '/services#trauma' },
++  { name: 'Complex Trauma Surgery', href: '/services#trauma' },
++  { name: 'Hip & Knee Replacement', href: '/services#joint-replacement' },
++  { name: 'Shoulder & Elbow Replacement', href: '/services#shoulder-elbow' },
++  { name: 'Arthroscopic Surgery', href: '/services#arthroscopy' },
++  { name: 'Spine Surgery', href: '/services#spine' },
++  { name: 'Sports Medicine', href: '/services#sports' },
+ ]
+ 
+ export function Footer() {
+@@ -81,27 +81,40 @@ export function Footer() {
+               <li className="flex items-start gap-3 text-sm text-primary-foreground/80">
+                 <MapPin className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                 <span>
+-                  Medical Chambers<br />
+-                  Salt Lake, Sector V<br />
+-                  Kolkata, West Bengal 700091
++                  Advanced Ortho and Spine Clinic<br />
++                  P 786, Lake Town Block A<br />
++                  Kolkata – 700 089<br />
++                  (Behind Jaya Cinema, Opp. IDBI Bank)
+                 </span>
+               </li>
+               <li>
+-                <a href="tel:+919999999999" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
++                <a href="tel:+919874731994" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                   <Phone className="h-5 w-5 flex-shrink-0" />
+-                  <span>+91 99999 99999</span>
++                  <span>+91 98747 31994</span>
+                 </a>
+               </li>
+               <li>
+-                <a href="mailto:contact@drsoutrik.com" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
++                <a href="tel:+919304153453" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
++                  <Phone className="h-5 w-5 flex-shrink-0" />
++                  <span>+91 93041 53453</span>
++                </a>
++              </li>
++              <li>
++                <a href="tel:+919804270742" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
++                  <Phone className="h-5 w-5 flex-shrink-0" />
++                  <span>+91 98042 70742</span>
++                </a>
++              </li>
++              <li>
++                <a href="mailto:soutrikmukherjee@gmail.com" className="flex items-center gap-3 text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                   <Mail className="h-5 w-5 flex-shrink-0" />
+-                  <span>contact@drsoutrik.com</span>
++                  <span>soutrikmukherjee@gmail.com</span>
+                 </a>
+               </li>
+               <li className="flex items-start gap-3 text-sm text-primary-foreground/80">
+                 <Clock className="h-5 w-5 flex-shrink-0 mt-0.5" />
+                 <span>
+-                  Mon - Sat: 10:00 AM - 7:00 PM<br />
++                  Mon – Sat: 10:00 AM – 7:00 PM<br />
+                   Sunday: By Appointment Only
+                 </span>
+               </li>
+diff --git a/components/header.tsx b/components/header.tsx
+index 150bf27..17c6008 100644
+--- a/components/header.tsx
++++ b/components/header.tsx
+@@ -58,9 +58,9 @@ export function Header() {
+           ))}
+         </div>
+         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+-          <a href="tel:+919999999999" className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors">
++          <a href="tel:+919874731994" className="flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors">
+             <Phone className="h-4 w-4" />
+-            <span className="hidden xl:inline">Call Now</span>
++            <span className="hidden xl:inline">+91 98747 31994</span>
+           </a>
+           <Button asChild>
+             <Link href="/appointment">Book Appointment</Link>
+@@ -102,9 +102,9 @@ export function Header() {
+                 ))}
+               </div>
+               <div className="py-6 space-y-4">
+-                <a href="tel:+919999999999" className="flex items-center gap-2 text-foreground">
++                <a href="tel:+919874731994" className="flex items-center gap-2 text-foreground">
+                   <Phone className="h-5 w-5" />
+-                  <span>Call Now</span>
++                  <span>+91 98747 31994</span>
+                 </a>
+                 <Button asChild className="w-full">
+                   <Link href="/appointment">Book Appointment</Link>
+diff --git a/components/sections/about-preview.tsx b/components/sections/about-preview.tsx
+index 43e9be9..92dc260 100644
+--- a/components/sections/about-preview.tsx
++++ b/components/sections/about-preview.tsx
+@@ -7,7 +7,6 @@ export function AboutPreview() {
+     <section className="py-20 lg:py-28 bg-muted/30">
+       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+-          {/* Image */}
+           <div className="relative order-2 lg:order-1">
+             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+               <div className="absolute inset-0 flex items-center justify-center">
+@@ -17,18 +16,16 @@ export function AboutPreview() {
+                       <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                     </svg>
+                   </div>
+-                  <p className="text-sm text-muted-foreground">Professional Profile Image</p>
++                  <p className="text-sm text-muted-foreground">Dr. Soutrik Mukherjee</p>
+                 </div>
+               </div>
+             </div>
+-            {/* Decorative card */}
+             <div className="absolute -bottom-6 -right-6 bg-background rounded-xl shadow-lg p-6 max-w-xs hidden lg:block">
+-              <p className="text-sm text-muted-foreground mb-1">Specialized in</p>
+-              <p className="font-serif font-semibold text-foreground">Joint Replacement & Spine Surgery</p>
++              <p className="text-sm text-muted-foreground mb-1">Specialised in</p>
++              <p className="font-serif font-semibold text-foreground">Joint Replacement, Spine & Trauma Surgery</p>
+             </div>
+           </div>
+ 
+-          {/* Content */}
+           <div className="space-y-6 order-1 lg:order-2">
+             <div>
+               <p className="text-sm font-medium uppercase tracking-wider text-secondary mb-3">
+@@ -38,42 +35,45 @@ export function AboutPreview() {
+                 Dr. Soutrik Mukherjee
+               </h2>
+               <p className="text-lg text-primary font-medium">
+-                MS (Ortho), DNB (Ortho), Fellowship in Joint Replacement
++                MS (Ortho) · AO Masters · 10 Years Experience
+               </p>
+             </div>
+             
+             <div className="space-y-4 text-muted-foreground leading-relaxed">
+               <p>
+-                Dr. Soutrik Mukherjee is a highly skilled orthopedic surgeon with extensive 
+-                experience in joint replacement surgery, spine care, and sports medicine. 
+-                His approach combines cutting-edge surgical techniques with compassionate 
+-                patient care.
++                Dr. Soutrik Mukherjee is an orthopedic surgeon with over 10 years of experience, 
++                specialising in complex joint replacements, spine surgery, trauma care, and sports 
++                medicine. He completed his MS in Orthopaedics from WBUHS and subsequently pursued 
++                five specialised fellowships — including at the internationally acclaimed Ganga Hospital, 
++                Coimbatore.
+               </p>
+               <p>
+-                With a commitment to evidence-based medicine and continuous learning, 
+-                Dr. Mukherjee ensures that each patient receives personalized treatment 
+-                plans designed for optimal outcomes and faster recovery.
++                He practices at <strong>Advanced Ortho and Spine Clinic</strong> in Lake Town, Kolkata, 
++                where he combines evidence-based medicine with a genuinely patient-first approach. 
++                His patients value not just his surgical precision, but also his clarity in explaining 
++                diagnoses and treatment options.
+               </p>
+             </div>
+ 
+-            <div className="flex flex-wrap gap-4">
+-              <div className="flex items-center gap-2">
+-                <div className="w-2 h-2 rounded-full bg-secondary" />
+-                <span className="text-sm text-foreground">Expert in Minimally Invasive Surgery</span>
+-              </div>
+-              <div className="flex items-center gap-2">
+-                <div className="w-2 h-2 rounded-full bg-secondary" />
+-                <span className="text-sm text-foreground">Patient-Centered Approach</span>
+-              </div>
+-              <div className="flex items-center gap-2">
+-                <div className="w-2 h-2 rounded-full bg-secondary" />
+-                <span className="text-sm text-foreground">International Training</span>
+-              </div>
++            <div className="grid grid-cols-2 gap-3">
++              {[
++                'MBBS & MS Ortho – WBUHS',
++                'Fellowship – Ganga Hospital, Coimbatore',
++                'AO Masters Qualification',
++                'Fellowship in Spine Surgeries – SSWB',
++                'Joint Reconstruction & Sports Medicine – WBOA',
++                '10+ Years Clinical Experience',
++              ].map((item, i) => (
++                <div key={i} className="flex items-center gap-2">
++                  <div className="w-2 h-2 rounded-full bg-secondary flex-shrink-0" />
++                  <span className="text-sm text-foreground">{item}</span>
++                </div>
++              ))}
+             </div>
+ 
+             <Button asChild size="lg" className="mt-4">
+               <Link href="/about">
+-                Learn More About Dr. Mukherjee
++                Full Profile & Qualifications
+                 <ArrowRight className="ml-2 h-5 w-5" />
+               </Link>
+             </Button>
+diff --git a/components/sections/cta-section.tsx b/components/sections/cta-section.tsx
+index 2e88cae..c58469b 100644
+--- a/components/sections/cta-section.tsx
++++ b/components/sections/cta-section.tsx
+@@ -1,5 +1,5 @@
+ import Link from 'next/link'
+-import { ArrowRight, Calendar, Phone } from 'lucide-react'
++import { Calendar, Phone } from 'lucide-react'
+ import { Button } from '@/components/ui/button'
+ 
+ export function CTASection() {
+@@ -8,11 +8,12 @@ export function CTASection() {
+       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <div className="text-center max-w-3xl mx-auto">
+           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
+-            Take the First Step Toward Pain-Free Movement
++            Ready to Take the First Step Towards Pain-Free Living?
+           </h2>
+           <p className="text-lg text-primary-foreground/80 leading-relaxed mb-10">
+-            Don&apos;t let joint pain or spine problems hold you back. Schedule a consultation 
+-            with Dr. Soutrik Mukherjee and discover your path to recovery.
++            Whether it is joint pain, a spine condition, a sports injury, or a fracture — 
++            Dr. Soutrik Mukherjee and his team at Advanced Ortho and Spine Clinic, Lake Town 
++            are here to help. Book a consultation today.
+           </p>
+           
+           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+@@ -32,9 +33,9 @@ export function CTASection() {
+               variant="outline"
+               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+             >
+-              <a href="tel:+919999999999">
++              <a href="tel:+919874731994">
+                 <Phone className="mr-2 h-5 w-5" />
+-                Call Now
++                +91 98747 31994
+               </a>
+             </Button>
+           </div>
+@@ -42,15 +43,15 @@ export function CTASection() {
+           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-8 text-primary-foreground/70 text-sm">
+             <div className="flex items-center gap-2">
+               <div className="w-2 h-2 rounded-full bg-secondary" />
+-              Same Week Appointments Available
++              Advanced Ortho and Spine Clinic, Lake Town
+             </div>
+             <div className="flex items-center gap-2">
+               <div className="w-2 h-2 rounded-full bg-secondary" />
+-              Insurance & Cashless Facility
++              Mon – Sat: 10 AM – 7 PM
+             </div>
+             <div className="flex items-center gap-2">
+               <div className="w-2 h-2 rounded-full bg-secondary" />
+-              Second Opinion Welcome
++              Emergency guidance available
+             </div>
+           </div>
+         </div>
+diff --git a/components/sections/hero-section.tsx b/components/sections/hero-section.tsx
+index dc13391..b57166e 100644
+--- a/components/sections/hero-section.tsx
++++ b/components/sections/hero-section.tsx
+@@ -1,11 +1,10 @@
+ import Link from 'next/link'
+-import { ArrowRight } from 'lucide-react'
++import { ArrowRight, Phone } from 'lucide-react'
+ import { Button } from '@/components/ui/button'
+ 
+ export function HeroSection() {
+   return (
+     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-muted via-background to-muted overflow-hidden">
+-      {/* Background pattern */}
+       <div className="absolute inset-0 opacity-5">
+         <div className="absolute inset-0" style={{
+           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F4C81' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+@@ -14,7 +13,6 @@ export function HeroSection() {
+       
+       <div className="relative mx-auto max-w-7xl px-4 py-32 sm:px-6 lg:px-8 lg:py-40">
+         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+-          {/* Content */}
+           <div className="text-center lg:text-left space-y-8">
+             <div className="space-y-4">
+               <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+@@ -24,9 +22,9 @@ export function HeroSection() {
+                 Advanced Orthopedic, Joint Replacement & Spine Care
+               </h1>
+               <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
+-                Experience world-class orthopedic treatment with personalized care. 
+-                Dr. Soutrik Mukherjee combines expertise with compassion to help you 
+-                return to pain-free living.
++                Led by Dr. Soutrik Mukherjee — MS (Ortho), AO Masters, with 10 years of experience 
++                and multiple international fellowships. Trusted by thousands of patients across Kolkata 
++                for complex orthopedic surgeries, joint replacements, and spine care.
+               </p>
+             </div>
+             
+@@ -38,14 +36,29 @@ export function HeroSection() {
+                 </Link>
+               </Button>
+               <Button asChild variant="outline" size="lg" className="text-base">
+-                <Link href="/services">
+-                  Explore Treatments
+-                </Link>
++                <a href="tel:+919874731994">
++                  <Phone className="mr-2 h-5 w-5" />
++                  +91 98747 31994
++                </a>
+               </Button>
+             </div>
++
++            <div className="flex flex-wrap gap-6 justify-center lg:justify-start text-sm text-muted-foreground">
++              <div className="flex items-center gap-2">
++                <div className="w-2 h-2 rounded-full bg-secondary" />
++                10+ Years Experience
++              </div>
++              <div className="flex items-center gap-2">
++                <div className="w-2 h-2 rounded-full bg-secondary" />
++                5 Advanced Fellowships
++              </div>
++              <div className="flex items-center gap-2">
++                <div className="w-2 h-2 rounded-full bg-secondary" />
++                Lake Town, Kolkata
++              </div>
++            </div>
+           </div>
+ 
+-          {/* Doctor Image Placeholder */}
+           <div className="relative hidden lg:block">
+             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
+               <div className="absolute inset-0 flex items-center justify-center">
+@@ -55,21 +68,25 @@ export function HeroSection() {
+                       <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                     </svg>
+                   </div>
+-                  <p className="text-sm text-muted-foreground">Professional Doctor Image</p>
++                  <p className="text-sm text-muted-foreground">Dr. Soutrik Mukherjee</p>
+                 </div>
+               </div>
+-              {/* Decorative elements */}
+               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/20 rounded-full blur-2xl" />
+               <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
+             </div>
++
++            <div className="absolute -bottom-6 -left-6 bg-background rounded-xl shadow-lg p-5 max-w-xs">
++              <p className="text-xs text-muted-foreground mb-1">Advanced Ortho and Spine Clinic</p>
++              <p className="font-semibold text-foreground text-sm">Lake Town, Kolkata</p>
++              <p className="text-xs text-muted-foreground mt-1">P 786, Lake Town Block A</p>
++            </div>
+           </div>
+         </div>
+       </div>
+ 
+-      {/* Scroll indicator */}
+       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+-        <div className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2">
+-          <div className="w-1 h-2 bg-primary/50 rounded-full" />
++        <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-1">
++          <div className="w-1 h-2 rounded-full bg-muted-foreground/50" />
+         </div>
+       </div>
+     </section>

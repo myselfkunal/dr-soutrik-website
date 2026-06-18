@@ -5,7 +5,7 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { CTASection } from '@/components/sections/cta-section'
 import { Button } from '@/components/ui/button'
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, Loader2, AlertCircle } from 'lucide-react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,10 +16,43 @@ export default function ContactPage() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError('')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'c73d839e-cd0b-442b-b0e0-8a0912126c89',
+          subject: `Website Enquiry – ${formData.subject} (from ${formData.name})`,
+          from_name: formData.name,
+          replyto: formData.email,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          subject_type: formData.subject,
+          message: formData.message,
+        }),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitted(true)
+      } else {
+        setError('Something went wrong. Please call us at +91 98747 31994.')
+      }
+    } catch {
+      setError('Network error. Please call us at +91 98747 31994.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -66,9 +99,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Clinic Address</h3>
                     <p className="text-muted-foreground">
-                      Medical Chambers<br />
-                      Salt Lake, Sector V<br />
-                      Kolkata, West Bengal 700091
+                      Advanced Ortho and Spine Clinic<br />
+                      P 786, Lake Town Block A<br />
+                      Kolkata – 700 089<br />
+                      <span className="text-sm">(Behind Jaya Cinema, Opp. IDBI Bank, Lake Town)</span>
                     </p>
                   </div>
                 </div>
@@ -79,8 +113,14 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Phone</h3>
-                    <a href="tel:+919999999999" className="text-primary hover:underline block">
-                      +91 99999 99999
+                    <a href="tel:+919874731994" className="text-primary hover:underline block">
+                      +91 98747 31994
+                    </a>
+                    <a href="tel:+919304153453" className="text-primary hover:underline block">
+                      +91 93041 53453
+                    </a>
+                    <a href="tel:+919804270742" className="text-primary hover:underline block">
+                      +91 98042 70742
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">
                       For appointments and inquiries
@@ -94,8 +134,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Email</h3>
-                    <a href="mailto:contact@drsoutrik.com" className="text-primary hover:underline block">
-                      contact@drsoutrik.com
+                    <a href="mailto:drsoutrikmukherjee@gmail.com" className="text-primary hover:underline block">
+                      drsoutrikmukherjee@gmail.com
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">
                       We respond within 24 hours
@@ -117,14 +157,28 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-muted rounded-xl aspect-video flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                  <p className="text-muted-foreground">Interactive Map</p>
-                  <p className="text-sm text-muted-foreground">Salt Lake, Sector V, Kolkata</p>
-                </div>
+              {/* Google Maps Embed */}
+              <div className="rounded-xl overflow-hidden border border-border shadow-sm">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1038.2951468074923!2d88.40204657623457!3d22.60624644921985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4412df76187fb%3A0x4904c51cbecd3022!2sDr.%20Soutrik%20Mukherjee%20-%20Best%20Orthopedic%2C%20Joint%20Replacement%20and%20Spine%20Surgeon%20in%20Kolkata.!5e0!3m2!1sen!2sin!4v1781233310014!5m2!1sen!2sin"
+                  width="100%"
+                  height="380"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Advanced Ortho and Spine Clinic – Dr. Soutrik Mukherjee, Lake Town, Kolkata"
+                />
               </div>
+              <a
+                href="https://maps.google.com/?q=Dr.+Soutrik+Mukherjee+Lake+Town+Kolkata"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-2 text-sm text-primary hover:underline"
+              >
+                <MapPin className="h-4 w-4" />
+                Open in Google Maps
+              </a>
             </div>
 
             {/* Contact Form */}
@@ -190,7 +244,7 @@ export default function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20"
-                        placeholder="+91 99999 99999"
+                        placeholder="+91 98747 31994"
                       />
                     </div>
                     <div>
@@ -250,22 +304,22 @@ export default function ContactPage() {
             <div className="bg-background rounded-xl p-6 text-center">
               <h3 className="font-semibold text-foreground mb-2">By Metro</h3>
               <p className="text-sm text-muted-foreground">
-                Nearest Metro Station: Sector V<br />
-                10 minutes walk from the station
+                Nearest Metro Station: Noapara (Orange Line) or Shyambazar<br />
+                Auto/cab from station to Lake Town Block A
               </p>
             </div>
             <div className="bg-background rounded-xl p-6 text-center">
               <h3 className="font-semibold text-foreground mb-2">By Car</h3>
               <p className="text-sm text-muted-foreground">
-                Ample parking available at the premises<br />
-                Valet parking on request
+                Available near the clinic on Lake Town Block A<br />
+                Behind Jaya Cinema, opposite IDBI Bank
               </p>
             </div>
             <div className="bg-background rounded-xl p-6 text-center">
               <h3 className="font-semibold text-foreground mb-2">By Bus</h3>
               <p className="text-sm text-muted-foreground">
-                Multiple bus routes available<br />
-                Bus stop within 5 minutes walking distance
+                Buses from Ultadanga, Dumdum, Shyambazar<br />
+                Alight at Lake Town crossing
               </p>
             </div>
           </div>

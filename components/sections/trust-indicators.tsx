@@ -1,29 +1,29 @@
-import { Award, Users, BookOpen, Medal } from 'lucide-react'
+import { Award, Users, GraduationCap, Building2 } from 'lucide-react'
 
 const stats = [
   {
     icon: Award,
     label: 'Years of Experience',
-    value: 'XX+',
-    description: 'Dedicated to orthopedic excellence',
+    value: '10+',
+    description: 'In orthopedic surgery',
   },
   {
     icon: Users,
     label: 'Successful Procedures',
-    value: 'XXX+',
+    value: '3,000+',
     description: 'Patients treated with care',
   },
   {
-    icon: BookOpen,
-    label: 'Research Publications',
-    value: 'XX+',
-    description: 'Contributing to medical science',
+    icon: GraduationCap,
+    label: 'Awards & Recognitions',
+    value: '10+',
+    description: 'State, national & international',
   },
   {
-    icon: Medal,
-    label: 'Awards & Recognitions',
-    value: 'XX+',
-    description: 'For clinical excellence',
+    icon: Building2,
+    label: 'Hospital Affiliations',
+    value: '6',
+    description: 'Across Kolkata',
   },
 ]
 

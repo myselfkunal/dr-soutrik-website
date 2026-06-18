@@ -10,36 +10,43 @@ export const metadata: Metadata = {
 }
 
 const qualifications = [
-  'MBBS - Medical College, Kolkata',
-  'MS (Orthopaedics) - IPGMER, Kolkata',
-  'DNB (Orthopaedics) - National Board of Examinations',
-  'Fellowship in Joint Replacement Surgery',
-  'Advanced Training in Spine Surgery',
-  'International Fellowship in Sports Medicine',
+  'MBBS – West Bengal University of Health Sciences (WBUHS)',
+  'MS (Orthopaedics) – WBUHS',
+  'Fellowship in Spine Surgeries – SSWB',
+  'Fellowship in Pelvi-Acetabular Surgery – Ganga Hospital, Coimbatore',
+  'Fellowship in Adult Joint Reconstruction & Sports Medicine – WBOA',
+  'AO Masters',
 ]
 
 const memberships = [
+  'West Bengal Orthopaedic Association (WBOA)',
   'Indian Orthopaedic Association (IOA)',
-  'Indian Arthroscopy Society of India (ASI)',
-  'Bengal Orthopaedic Association',
-  'AO Trauma India',
-  'International Society of Orthopaedic Surgery and Traumatology (SICOT)',
+  'AO Foundation – AO Masters',
+  'SICOT – International Society of Orthopaedic Surgery and Traumatology',
+  'Spine Surgery Working Group (SSWB)',
 ]
 
 const awards = [
-  { year: 'XXXX', title: 'Excellence in Orthopedic Surgery Award' },
-  { year: 'XXXX', title: 'Best Paper Presentation - National Conference' },
-  { year: 'XXXX', title: 'Young Achiever Award - Bengal Orthopaedic Association' },
-  { year: 'XXXX', title: 'Clinical Excellence Recognition' },
+  { year: '2018', title: 'Best PG Paper Award – Jharkhand State Orthopaedic Conference' },
+  { year: '2019', title: 'Winner of PG Quiz – West Bengal State Orthopaedic Conference' },
+  { year: '2019', title: 'First Runner Up in PG Paper Award – West Bengal State Orthopaedic Conference' },
+  { year: '2019', title: 'Winner – EAST ZONE Finals, Torrent Young Scholar Award (TYSA) in Orthopaedics' },
+  { year: '2019', title: 'First Runner Up – NATIONAL Finals, Torrent Young Scholar Award (TYSA) in Orthopaedics' },
+  { year: '2020', title: 'Exchange Fellow – West Bengal Orthopaedic Association (WBOA)' },
+  { year: '2020', title: 'Best Paper Award – Foot & Ankle Session, MIDCON' },
+  { year: '2023', title: 'Invited Speaker – 7th International Conference in Orthopaedics, Rome' },
+  { year: 'ongoing', title: 'Invited Faculty – Hip Symposia across India (complex primary & revision hip replacements)' },
+  { year: 'ongoing', title: 'Faculty – Arthroplasty Sessions at National Symposium and SICOT' },
+  { year: '2024', title: 'Speaker – Siliguri Trauma Conference (distal femur fractures & novel surgical techniques)' },
 ]
 
 const specialInterests = [
-  'Primary & Revision Joint Replacement',
-  'Minimally Invasive Spine Surgery',
-  'Sports Injury Management',
-  'Complex Trauma Reconstruction',
-  'Arthroscopic Surgery',
-  'Pediatric Orthopedics',
+  'Complex Trauma Surgery',
+  'Primary & Revision Hip, Knee, Shoulder & Elbow Replacement',
+  'Arthroscopic Knee & Shoulder Surgery',
+  'Ligament Injury & Sports Medicine',
+  'Degenerative & Traumatic Spine Surgery',
+  'Treatment for Osteoarthritis, Osteoporosis & Rheumatoid Arthritis',
 ]
 
 export default function AboutPage() {
@@ -59,19 +66,21 @@ export default function AboutPage() {
                 Dr. Soutrik Mukherjee
               </h1>
               <p className="text-xl text-primary font-medium mb-6">
-                MS (Ortho), DNB (Ortho), Fellowship in Joint Replacement
+                MS (Ortho) | Fellowships in Spine, Joint Reconstruction & Sports Medicine | AO Masters
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Dr. Soutrik Mukherjee is a distinguished orthopedic surgeon specializing in 
-                joint replacement, spine surgery, and sports medicine. With a patient-centric 
-                approach and commitment to clinical excellence, he has helped thousands of 
-                patients regain mobility and return to pain-free living.
+                Dr. Soutrik Mukherjee is a distinguished orthopedic surgeon with over 10 years of 
+                experience, specialising in joint replacement, spine surgery, complex trauma, and 
+                sports medicine. He has performed over 3,000 procedures and runs the Advanced Ortho 
+                and Spine Clinic in Lake Town, Kolkata, where he combines advanced surgical techniques 
+                with personalised, compassionate care.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                His practice philosophy centers on evidence-based medicine, minimally invasive 
-                techniques, and comprehensive patient education. Dr. Mukherjee believes that 
-                informed patients achieve better outcomes, and he takes time to explain every 
-                aspect of the treatment journey.
+                A winner of multiple state and national academic awards — including the Torrent Young 
+                Scholar Award and Best Paper recognitions — Dr. Mukherjee has been invited as a speaker 
+                at the 7th International Conference in Orthopaedics in Rome and as a faculty at hip 
+                symposia across India. His philosophy is simple: treat every patient the way you would 
+                treat your own family.
               </p>
             </div>
             
@@ -107,22 +116,22 @@ export default function AboutPage() {
             </div>
             <div className="prose prose-lg max-w-none text-muted-foreground">
               <p>
-                Dr. Mukherjee&apos;s journey in orthopedic surgery began with a passion for helping 
-                patients overcome musculoskeletal challenges. After completing his medical education 
-                with distinction, he pursued specialized training in orthopedics at some of India&apos;s 
-                premier institutions.
+                Dr. Mukherjee&apos;s journey in orthopedic surgery spans over a decade of rigorous 
+                training and hands-on clinical practice. After completing his MBBS and MS 
+                in Orthopaedics from West Bengal University of Health Sciences, he pursued 
+                multiple advanced fellowships to sharpen his expertise across different subspecialities.
               </p>
               <p>
-                His fellowship training in joint replacement surgery provided him with advanced 
-                skills in both primary and revision procedures. Additionally, his specialized 
-                training in spine surgery has equipped him to handle complex spinal conditions 
-                using the latest minimally invasive techniques.
+                His Fellowship in Spine Surgeries (SSWB) and Fellowship in Pelvi-Acetabular Surgery 
+                at the renowned Ganga Hospital in Coimbatore gave him exposure to some of the most 
+                complex orthopedic cases in the country. He further completed a Fellowship in Adult 
+                Joint Reconstruction and Sports Medicine under WBOA and holds the prestigious 
+                AO Masters qualification.
               </p>
               <p>
-                Over the years, Dr. Mukherjee has performed hundreds of successful joint replacement 
-                and spine surgeries, earning recognition from peers and patients alike. His commitment 
-                to continuous learning ensures that his patients benefit from the latest advances 
-                in orthopedic care.
+                Today, with 10 years of experience, Dr. Mukherjee runs the Advanced Ortho and Spine 
+                Clinic in Lake Town, Kolkata — a modern facility dedicated to delivering evidence-based, 
+                patient-centred orthopedic care to the people of Kolkata and beyond.
               </p>
             </div>
           </div>
