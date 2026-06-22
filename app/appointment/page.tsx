@@ -53,7 +53,7 @@ export default function AppointmentPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'c73d839e-cd0b-442b-b0e0-8a0912126c89', // ← replace this
+          access_key: '339fbd2d-5f2c-4fc5-aad6-af961fad9f68', // ← replace this
           subject: `New Appointment Request – ${formData.name} (${formData.treatment})`,
           from_name: formData.name,
           replyto: formData.email || formData.phone,
@@ -323,8 +323,8 @@ export default function AppointmentPage() {
                     <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                     <div>
                       <p className="font-medium text-foreground text-sm">Email</p>
-                      <a href="mailto:kunalshawip@gmail.com" className="text-sm text-primary hover:underline break-all mt-0.5 block">
-                        kunalshawip@gmail.com
+                      <a href="mailto:drsoutrikmukherjee@gmail.com" className="text-sm text-primary hover:underline break-all mt-0.5 block">
+                        drsoutrikmukherjee@gmail.com
                       </a>
                     </div>
                   </li>
