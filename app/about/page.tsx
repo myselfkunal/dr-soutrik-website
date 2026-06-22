@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { CTASection } from '@/components/sections/cta-section'
-import { Award, GraduationCap, Briefcase, Heart, Target, BookOpen } from 'lucide-react'
+import { Award, GraduationCap, Briefcase, Heart, Target, BookOpen, Newspaper } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About Dr. Soutrik Mukherjee | Orthopedic Surgeon in Kolkata',
@@ -85,17 +86,14 @@ export default function AboutPage() {
             </div>
             
             <div className="relative">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4">
-                      <svg className="w-20 h-20 text-primary/40" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                      </svg>
-                    </div>
-                    <p className="text-sm text-muted-foreground">Professional Portrait</p>
-                  </div>
-                </div>
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/dr-soutrik-hero.png"
+                  alt="Dr. Soutrik Mukherjee – Orthopedic Surgeon Kolkata"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -138,8 +136,143 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Qualifications & Memberships */}
+      {/* In The OT — Surgery Photos */}
       <section className="py-20 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Target className="h-6 w-6 text-primary" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-foreground">
+              In The Operating Theatre
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/dr-soutrik-surgery.png"
+                alt="Dr. Soutrik Mukherjee performing orthopedic surgery"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="space-y-4">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Dr. Mukherjee brings the same precision and focus to every procedure — whether a 
+                primary knee replacement or a complex revision surgery. He uses advanced surgical 
+                technology including AR-assisted guidance systems for select high-complexity cases.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                His surgical practice spans six hospital affiliations across Kolkata, giving patients 
+                flexibility in choosing a facility that suits their needs and insurance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* International Recognition — Rome Conference */}
+      <section className="py-20 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Award className="h-6 w-6 text-primary" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-foreground">
+              International Recognition
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="md:col-span-2 grid sm:grid-cols-2 gap-6">
+              <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/dr-soutrik-rome-1.png"
+                  alt="Dr. Soutrik Mukherjee presenting at 7th International Conference on Orthopaedics, Rome 2023"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/dr-soutrik-rome-2.png"
+                  alt="Dr. Soutrik Mukherjee at Rome Orthopaedics Conference 2023"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/dr-soutrik-rome-certificate.png"
+                  alt="Certificate of Recognition – 7th International Conference on Orthopaedics, Rome 2023"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground text-center">
+                Certificate of Recognition — Rome, July 2023
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 p-6 bg-muted/40 rounded-xl border border-border">
+            <p className="text-muted-foreground leading-relaxed">
+              In July 2023, Dr. Mukherjee was invited as a speaker at the{' '}
+              <strong className="text-foreground">7th International Conference on Orthopaedics</strong>{' '}
+              held in Rome, Italy — where he presented original research on reconstruction of distal 
+              femur medial column fractures using a novel technique. He received a Certificate of 
+              Recognition from the conference editors of{' '}
+              <em>Orthopedic & Muscular System: Current Research</em>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* In The News */}
+      <section className="py-20 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 mb-12">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Newspaper className="h-6 w-6 text-primary" />
+            </div>
+            <h2 className="font-serif text-3xl font-bold text-foreground">
+              In The News
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="rounded-xl overflow-hidden shadow-xl border border-border">
+              <Image
+                src="/images/dr-soutrik-news.png"
+                alt="Statesman News – Dr. Soutrik Mukherjee performs debut mega-prosthesis for knee trauma in North Bengal"
+                width={600}
+                height={800}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="space-y-4">
+              <p className="text-sm font-medium uppercase tracking-wider text-secondary">
+                Statesman News Service · Siliguri
+              </p>
+              <h3 className="font-serif text-2xl font-bold text-foreground">
+                North Bengal Experiences Debut Use of Mega-Prosthesis for Knee Trauma
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Dr. Soutrik Mukherjee and his team made history at Paramount Hospital, Siliguri, 
+                by performing the first-ever mega-prosthesis (tumour prosthesis) surgery for a 
+                traumatic knee case in North Bengal — fully replacing the highly damaged lower 
+                thigh bone and upper shin bone for a patient who had been unable to walk for over 
+                a year.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                The patient was able to walk with a walker the very next day after surgery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Qualifications & Memberships */}
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -160,7 +293,6 @@ export default function AboutPage() {
                 ))}
               </ul>
             </div>
-
             <div>
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -184,7 +316,7 @@ export default function AboutPage() {
       </section>
 
       {/* Awards Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-12">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -209,7 +341,7 @@ export default function AboutPage() {
       </section>
 
       {/* Special Interests */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-background">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-12">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -223,7 +355,7 @@ export default function AboutPage() {
             {specialInterests.map((interest, index) => (
               <div 
                 key={index}
-                className="p-4 rounded-lg bg-background border border-border flex items-center gap-3"
+                className="p-4 rounded-lg bg-muted/30 border border-border flex items-center gap-3"
               >
                 <div className="w-2 h-2 rounded-full bg-secondary" />
                 <span className="text-foreground">{interest}</span>
@@ -233,8 +365,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-20 bg-background">
+      {/* Philosophy */}
+      <section className="py-20 bg-muted/30">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
@@ -246,7 +378,7 @@ export default function AboutPage() {
             <blockquote className="text-xl text-muted-foreground leading-relaxed italic">
               &quot;Every patient deserves to understand their condition and be an active participant 
               in their treatment decisions. My role is not just to operate, but to guide patients 
-              through their entire journey—from diagnosis to full recovery. I believe in treating 
+              through their entire journey — from diagnosis to full recovery. I believe in treating 
               patients the way I would want my own family to be treated: with expertise, compassion, 
               and transparency.&quot;
             </blockquote>

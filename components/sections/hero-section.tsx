@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -60,25 +61,26 @@ export function HeroSection() {
           </div>
 
           <div className="relative hidden lg:block">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8 space-y-4">
-                  <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                    <svg className="w-24 h-24 text-primary/40" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Dr. Soutrik Mukherjee</p>
-                </div>
-              </div>
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/20 rounded-full blur-2xl" />
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/dr-soutrik-hero.png"
+                alt="Dr. Soutrik Mukherjee – Orthopedic Surgeon, Lake Town Kolkata"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
 
             <div className="absolute -bottom-6 -left-6 bg-background rounded-xl shadow-lg p-5 max-w-xs">
               <p className="text-xs text-muted-foreground mb-1">Advanced Ortho and Spine Clinic</p>
               <p className="font-semibold text-foreground text-sm">Lake Town, Kolkata</p>
               <p className="text-xs text-muted-foreground mt-1">P 786, Lake Town Block A</p>
+            </div>
+
+            <div className="absolute -top-4 -right-4 bg-primary text-primary-foreground rounded-xl shadow-lg p-4 text-center">
+              <p className="text-2xl font-bold font-serif">3000+</p>
+              <p className="text-xs text-primary-foreground/80">Procedures</p>
             </div>
           </div>
         </div>

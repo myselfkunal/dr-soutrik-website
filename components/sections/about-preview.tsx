@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -8,17 +9,13 @@ export function AboutPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-secondary/10">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4">
-                    <svg className="w-16 h-16 text-primary/40" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div>
-                  <p className="text-sm text-muted-foreground">Dr. Soutrik Mukherjee</p>
-                </div>
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/dr-soutrik-consultation.png"
+                alt="Dr. Soutrik Mukherjee consulting a patient at Advanced Ortho and Spine Clinic"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-background rounded-xl shadow-lg p-6 max-w-xs hidden lg:block">
               <p className="text-sm text-muted-foreground mb-1">Specialised in</p>
